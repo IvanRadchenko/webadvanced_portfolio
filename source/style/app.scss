@@ -1,0 +1,21 @@
+@import "base/variables";
+@import "base/fonts";
+
+//Partials
+@import "base/mixins";
+
+
+body {
+  margin: 0;
+}
+
+@import "base/layout";
+@import 'common/greating';
+@import "common/_header";
+@import "common/_section";
+@import "common/_menu";
+@import "common/_footer";
+@import "common/_slider";
+@import "common/_form";
+@import "common/_map";
+@import "common/_blog";
