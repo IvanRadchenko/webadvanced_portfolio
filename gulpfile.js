@@ -11,6 +11,9 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
+  merge: require('merge-stream'),
+  buffer: require('vinyl-buffer'),
+  optPNG: require('imagemin-optipng'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
