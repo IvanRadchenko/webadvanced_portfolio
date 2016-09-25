@@ -2,15 +2,23 @@
 
 module.exports = function() {
   $.gulp.task('sprite', function() {
-    var spriteData = $.gulp.src('./sources/img/work/leaves/*.png')
-     .pipe($.gp.spritesmith({
-      imgName: 'leaves.png',
-      imgPath: '../img/work/leaves/sprite.png',
-      cssName: '_leaves.scss',
-      padding: 20 ,
-      algorithm: 'top-down'
-    }));
-     spriteData.img.pipe($.gulp.dest($.config.root + 'source/img/work/'));
-     spriteData.css.pipe($.gulp.dest($.config.root + 'source/style/common/'));
-  });
+    var spriteData = $.gulp.src('./source/img/work/leaves/*.png')
+      .pipe($.gp.spritesmith({
+        imgName: 'sprite.png',
+        cssName: 'sprite.css'
+      }));
+
+    var imgStream = spriteData.img
+      .pipe($.buffer())
+      .pipe($.gp.imagemin({
+        use: [$.optPNG()]
+      }))
+      .pipe($.gulp.dest($.config.root + '/assets/img'));
+
+    var cssStream = spriteData.css
+      .pipe($.gp.csso())
+      .pipe($.gulp.dest($.config.root + '/assets/css'));
+
+    return $.merge(imgStream, cssStream);
+  })
 };
