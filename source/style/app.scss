@@ -1,21 +1,17 @@
-@import "base/variables";
+@import "common/_variables";
 @import "base/fonts";
 
 //Partials
-@import "base/mixins";
-
-
-body {
-  margin: 0;
-}
+@import "mixins/_clearfix";
+@import "mixins/_media";
 
 @import "base/layout";
-@import 'common/greating';
-@import "common/_header";
-@import "common/_section";
-@import "common/_menu";
-@import "common/_footer";
-@import "common/_slider";
-@import "common/_form";
-@import "common/_map";
-@import "common/_blog";
+@import "common/greating";
+@import "partials/_header";
+@import "partials/_section";
+@import "partials/_menu";
+@import "partials/_footer";
+@import "partials/_slider";
+@import "partials/_form";
+@import "partials/_map";
+@import "partials/_blog";

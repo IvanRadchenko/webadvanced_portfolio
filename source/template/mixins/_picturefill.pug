@@ -1,0 +1,19 @@
+// - Define our sizes
+- var desktop = "1800px"
+- var laptop = "1200px"
+- var ipad = "768px"
+- var iphone = "320px"
+
+
+// - Define the source mixin
+mixin source(media, source)
+  source(media="(min-width: #{media})" srcset="#{source}")
+  // - 'source' needs both the image source and either resolution or width, e.g.
+  //   1x for normal resolution, 2x for retina, OR 720w, 1420w, etc. Can list multiple sources.
+
+// - Define the Picture mixin
+mixin picture(fallback, alt)
+  picture
+    mixin source(media, source)
+block content
+    img(src="#{fallback}", alt="#{alt}")

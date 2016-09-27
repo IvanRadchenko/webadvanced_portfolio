@@ -1,0 +1,17 @@
+section.login
+  .login__row
+    .login__intro
+      h1 AUTHORIZATION
+    form.login__form(action="/login" method="post")
+      input.login__input--login(type="text" name="login" placeholder="Login")
+      input.login__input--password(type="password" name="password" placeholder="Pasword")
+    .login__human
+      input.login__checkbox(type="checkbox" name="human" value="I an a human")
+    .login__robot
+      p Are you sure you are not a robot?
+      input.login__radio(type="radio" name="yes" value="Yes")
+      input.login__radio(type="radio" name="no" value="Not sure")
+    footer.login__footer
+      a.login__button.login__button--link(href="/index.html") Main page
+      input.login__button.login__button--submit(type="submit" name="submit" value="Login")
+block content
