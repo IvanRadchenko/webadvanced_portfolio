@@ -1,0 +1,48 @@
+/* ------- Grid ------- */
+.container {
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @extend %clearfix;
+}
+
+.row {
+	margin-left: -20px;
+	margin-right: -20px;
+
+	@extend %clearfix;
+}
+
+.col-1 {width: 120px;}
+.col-2 {width: 220px;}
+.col-3 {width: 320px;}
+.col-4 {width: 420px;}
+.col-5 {width: 520px;}
+.col-6 {width: 620px;}
+.col-7 {width: 720px;}
+.col-8 {width: 820px;}
+.col-9 {width: 920px;}
+.col-10 {width: 1020px;}
+.col-11 {width: 1120px;}
+.col-12 {width: 1220px;}
+
+[class*="col-"] {
+		display: block;
+		position: relative;
+		padding-right: 20px;
+		padding-left: 20px;
+		min-height: 1px;
+}
+
+[class*="col--centered"] {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+[class*="col--static"] {
+	position: static;
+}

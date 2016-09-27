@@ -1,10 +1,12 @@
+/* ------- Layout common ------- */
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
-  position: relative;
+	position: relative;
   margin: 0 auto;
   font: 1.6rem/1.5 'robotoregular', Arial, san-serif;
 }
@@ -18,11 +20,5 @@ html, body {
 }
 
 h1 {
-  font: 3.5rem/  'sansus_webissimoregular', Arial, san-serif;
-}
-
-.container {
-  width: 1200px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font: 3.5rem 'sansus_webissimoregular', Arial, san-serif;
 }

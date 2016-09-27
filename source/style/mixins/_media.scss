@@ -1,22 +1,22 @@
 //@include bp(..) {...}
 @mixin bp($point) {
   
-  $iphone: "(max-width: 320px)";
-  $ipad: "(max-width: 768px)";
-  $laptop: "(max-width: 1200px)";
-  $desktop: "(max-width: 1800px)";
+  $phone: "(max-width: 320px)";
+  $small: "(max-width: 768px)";
+  $medium: "(max-width: 1200px)";
+  $large: "(max-width: 1800px)";
 
-  @if $point == desktop {
-    @media #{$desktop} { @content; }
+  @if $point == lg {
+    @media #{$large} { @content; }
   }
-  @else if $point == laptop {
-    @media #{$laptop} { @content; }
+  @else if $point == md {
+    @media #{$medium} { @content; }
   }
-  @else if $point == ipad {
-    @media #{$ipad}  { @content; }
+  @else if $point == sm {
+    @media #{$small}  { @content; }
   }
-  @else if $point == iphone {
-    @media #{$iphone}  { @content; }
+  @else if $point == xs {
+    @media #{$phone}  { @content; }
   }
 
 }
