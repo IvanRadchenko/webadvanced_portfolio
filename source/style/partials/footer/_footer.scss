@@ -1,16 +1,23 @@
 .footer__main {
-  margin: 0 auto;
-  margin-top: -100px;
   color: $white;
   height: 100px;
   min-width: 1200px;
+
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+
+  @extend %clearfix;
 }
 
 .footer__main .container {
-  position: relative;
-  padding-top: 23px;
+  padding: 23px;
 }
 
 .footer__copyright {
   text-align: center;
+  color: $white;
 }

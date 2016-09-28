@@ -6,5 +6,7 @@ mixin radio(name, id, val, label)
   input.radio__input(type="radio", name= name, id= id, value= val)
   label.control.radio__label(for= id)= label
 
-mixin input(type, id, val)
+mixin input(type, id, val, svgid)
     input.form__input(type= type, name= id, id= id, placeholder= val,autocomplete="off")
+    label.form__label(for= id)
+      +svg(svgid)

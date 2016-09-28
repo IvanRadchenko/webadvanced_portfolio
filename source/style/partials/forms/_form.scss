@@ -1,9 +1,13 @@
 /* ------- Login Form ------- */
+.form__section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  min-height: 100%;
+  position: relative;
+}
+
 .login {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  float: left;
 
   min-width: 380px;
 
@@ -42,8 +46,8 @@
   }
 }
 
-@import "partials/forms/_form__checkbox";
-@import "partials/forms/_form__radio";
-@import "partials/forms/_form__footer";
+@import "./partials/forms/_form__checkbox";
+@import "./partials/forms/_form__radio";
+@import "./partials/forms/_form__footer";
 
 
