@@ -1,7 +1,6 @@
-//Intro module for the Login Form
+//Authorization module Form--Login
 
-.form__intro {
-  padding: 10px 20px 0 20px;
+.form__auth {
   margin-bottom: 20px;
 
   &-row {
@@ -9,6 +8,19 @@
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 25px;
+
+    &--title {
+      margin-bottom: 30px;
+    }
+
+    &--title:after {
+      content: "";
+      display: block;
+      width: 90px;
+      margin: 0 auto;
+
+      border: 1px $white solid;
+    }
   }
 }
 

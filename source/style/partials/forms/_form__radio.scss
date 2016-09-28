@@ -1,16 +1,22 @@
+//Radio module for the Form--Login
+
 .form__robot-radio {
   margin-bottom: 35px;
+}
+
+.form__robot-title {
+  font-family: 'robotobold', Arial, san-serif;
+  margin: 10px;
 }
 
 .radio {
 
   &__label{
     padding-right: 20px;
-    margin-left: 5px;
+    margin-left: 10px;
 
     &:before {
       border-radius: 10px;
-      margin-right: 10px;
     }
   }
 
@@ -28,6 +34,7 @@
 
     &:checked + .radio__label {
       color: $btn;
+      font-family: 'robotomedium', Arial, san-serif;
     }
   }
 }

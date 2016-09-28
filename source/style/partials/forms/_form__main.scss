@@ -1,0 +1,26 @@
+//Summary of all form styles
+
+.auth__section {
+  padding-top: 35px;
+  padding-bottom: 55px;
+  min-height: 100%;
+  position: relative;
+}
+
+.login, .welcome {
+  min-width: 380px;
+
+  background-color: $darlform;
+  text-align: center;
+  color: $white;
+
+  @extend %clearfix;
+}
+
+.form__login, .form__welcome {
+  padding: 6px 20px 0 20px;
+  margin-bottom: 20px;
+}
+
+@import "form--login";
+@import "form--welcome";

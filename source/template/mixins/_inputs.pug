@@ -1,6 +1,7 @@
-mixin checkbox(name, id, val, label)
+mixin checkbox(name, id, val, label, svgid)
   input.checkbox__input(type="checkbox", name= name, id= id, value= val)
   label.control.checkbox__label(for= id)= label
+    +svg(svgid)
 
 mixin radio(name, id, val, label)
   input.radio__input(type="radio", name= name, id= id, value= val)

@@ -1,0 +1,140 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$leaf-first-name: 'leaf_first';
+$leaf-first-x: 0px;
+$leaf-first-y: 139px;
+$leaf-first-offset-x: 0px;
+$leaf-first-offset-y: -139px;
+$leaf-first-width: 58px;
+$leaf-first-height: 108px;
+$leaf-first-total-width: 141px;
+$leaf-first-total-height: 766px;
+$leaf-first-image: 'leaves.png';
+$leaf-first: (0px, 139px, 0px, -139px, 58px, 108px, 141px, 766px, 'leaves.png', 'leaf_first', );
+$leaf-snd-name: 'leaf_snd';
+$leaf-snd-x: 0px;
+$leaf-snd-y: 28px;
+$leaf-snd-offset-x: 0px;
+$leaf-snd-offset-y: -28px;
+$leaf-snd-width: 99px;
+$leaf-snd-height: 91px;
+$leaf-snd-total-width: 141px;
+$leaf-snd-total-height: 766px;
+$leaf-snd-image: 'leaves.png';
+$leaf-snd: (0px, 28px, 0px, -28px, 99px, 91px, 141px, 766px, 'leaves.png', 'leaf_snd', );
+$leaf-trd-name: 'leaf_trd';
+$leaf-trd-x: 0px;
+$leaf-trd-y: 267px;
+$leaf-trd-offset-x: 0px;
+$leaf-trd-offset-y: -267px;
+$leaf-trd-width: 141px;
+$leaf-trd-height: 120px;
+$leaf-trd-total-width: 141px;
+$leaf-trd-total-height: 766px;
+$leaf-trd-image: 'leaves.png';
+$leaf-trd: (0px, 267px, 0px, -267px, 141px, 120px, 141px, 766px, 'leaves.png', 'leaf_trd', );
+$leaves-name: 'leaves';
+$leaves-x: 0px;
+$leaves-y: 407px;
+$leaves-offset-x: 0px;
+$leaves-offset-y: -407px;
+$leaves-width: 141px;
+$leaves-height: 359px;
+$leaves-total-width: 141px;
+$leaves-total-height: 766px;
+$leaves-image: 'leaves.png';
+$leaves: (0px, 407px, 0px, -407px, 141px, 359px, 141px, 766px, 'leaves.png', 'leaves', );
+$mark-name: 'mark';
+$mark-x: 0px;
+$mark-y: 0px;
+$mark-offset-x: 0px;
+$mark-offset-y: 0px;
+$mark-width: 8px;
+$mark-height: 8px;
+$mark-total-width: 141px;
+$mark-total-height: 766px;
+$mark-image: 'leaves.png';
+$mark: (0px, 0px, 0px, 0px, 8px, 8px, 141px, 766px, 'leaves.png', 'mark', );
+$spritesheet-width: 141px;
+$spritesheet-height: 766px;
+$spritesheet-image: 'leaves.png';
+$spritesheet-sprites: ($leaf-first, $leaf-snd, $leaf-trd, $leaves, $mark, );
+$spritesheet: (141px, 766px, 'leaves.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

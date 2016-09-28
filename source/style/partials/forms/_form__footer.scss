@@ -1,4 +1,4 @@
-//Form Footer module
+//Footer module for the Form--Login
 
 .form {
   &__footer {
@@ -6,54 +6,57 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
     height: 45px;
-    margin-bottom: 20px;
-  }
-}
 
-.footer {
+    &-btn {
+      display: block;
+      height: 100%;
 
-  &__button {
-    flex: 1 50px;
-    display: block;
-    height: 100%;
-
-    color: $white;
-    font-family: 'robotomedium', Aria, san-serif;
-    line-height: 45px;
-    background-color: $btnrgba;
-
-    &:hover, &:active {
-      background-color: $btnhover;
-    }
-
-    &--link {
-      text-align: center;
-      text-decoration: none;
+      color: $white;
+      font-family: 'robotomedium', Aria, san-serif;
       line-height: 45px;
-    }
+      background-color: $btnrgba;
 
-    &--submit {
-      border: none;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
+      &:hover, &:active {
+        background-color: $btnhover;
       }
-    }
 
-    &--left {
-      border-right: 1px $white solid;
-    }
+      &--link {
+        text-align: center;
+        text-decoration: none;
+        line-height: 45px;
+      }
 
-    &--right {
-      border-left: 1px $white solid;
-    }
+      &--submit {
+        border: none;
+        cursor: pointer;
 
-    &--middle {
-      border-left: 1px $white solid;
-      border-right: 1px $white solid;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &--left {
+        border-right: 1px $fontgrey solid;
+      }
+
+      &--right {
+        border-left: 1px $fontgrey solid;
+      }
+
+      &--middle {
+        border-left: 1px $fontgrey solid;
+        border-right: 1px $fontgrey solid;
+        flex: 3 auto;
+      }
+
+      &--big {
+        flex: 5 auto;
+      }
+
+      &--small {
+        flex: 2 auto;
+      }
     }
   }
 }
