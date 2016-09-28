@@ -1,0 +1,10 @@
+mixin checkbox(name, id, val, label)
+  input.checkbox__input(type="checkbox", name= name, id= id, value= val)
+  label.control.checkbox__label(for= id)= label
+
+mixin radio(name, id, val, label)
+  input.radio__input(type="radio", name= name, id= id, value= val)
+  label.control.radio__label(for= id)= label
+
+mixin input(type, id, val)
+    input.form__input(type= type, name= id, id= id, placeholder= val,autocomplete="off")

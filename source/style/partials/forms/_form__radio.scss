@@ -1,0 +1,33 @@
+.form__robot-radio {
+  margin-bottom: 35px;
+}
+
+.radio {
+
+  &__label{
+    padding-right: 20px;
+    margin-left: 5px;
+
+    &:before {
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .radio__label:before {
+      content: '\2022';
+      color: $btn;
+      font-size: 35px;
+      display: inline;
+      text-align: center;
+      line-height: 20px;
+    }
+
+    &:checked + .radio__label {
+      color: $btn;
+    }
+  }
+}

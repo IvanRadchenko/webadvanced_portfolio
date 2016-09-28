@@ -1,0 +1,49 @@
+/* ------- Login Form ------- */
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 380px;
+
+
+  background-color: $darlform;
+  text-align: center;
+  color: $white;
+  z-index: 100;
+
+  @extend %clearfix;
+}
+
+  .form {
+    margin-bottom: 20px;
+  }
+
+@import "partials/forms/_form__intro";
+
+.control {
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+  }
+}
+
+@import "partials/forms/_form__checkbox";
+@import "partials/forms/_form__radio";
+@import "partials/forms/_form__footer";
+
+

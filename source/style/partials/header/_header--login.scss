@@ -1,6 +1,12 @@
 .header {
   position: relative;
-  text-align: center;
+
+  &:after {
+    content: '';
+    height: 100px;
+    display: block;
+  }
+
 
   &__img {
     /* Set rules to fill background */

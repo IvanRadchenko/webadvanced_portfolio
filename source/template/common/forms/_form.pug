@@ -1,0 +1,15 @@
+include ../../mixins/_svg
+include ../../mixins/_inputs
+
+section.container
+  .row
+    .col-4.col--centered.col--static
+      .login#login
+        form.form(action="/login" method="post")
+         include ../forms/_form__intro
+         include ../forms/_form__robot
+        footer.form__footer
+          a.footer__button.footer__button--link.footer__button--left(href="/index.html") Main page
+          input.footer__button.footer__button--submit.footer__button--right(type="submit" name="submit" value="Login")
+block content
+include ../../common/footer/_footer

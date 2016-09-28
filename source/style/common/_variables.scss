@@ -16,14 +16,15 @@ $slider: #f1ede1;
 $noskill: #dfdcd5;
 
 //Font colors
-$fontgrey: #373e42;
+$fontgrey: #c4cbcd;
 $white: #ffffff;
 $fontmain: #455a64;
 
 //Login button colors
 $btn: #6c9c5a;
+$btnrgba: rgba(#6c9c5a,.5);
 $btnhover: #4e8839;
-$btnborder: #fffff;
+$btnborder: rgba(0,0,0,.5);
 
 //Main Footer colors:
 $footerbot: rgba(#6c9c5a, .85);

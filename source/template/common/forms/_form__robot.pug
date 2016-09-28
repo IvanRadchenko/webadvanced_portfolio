@@ -1,0 +1,9 @@
+.form__robot
+  .form__robot-checkbox
+    +checkbox("human", "checkbox", "I am a human", "I am not Mr. Robot")
+    .svg__wrapper-check
+        +svg("check")
+  .form__robot-radio
+    p Are you sure you are not Mr. Robot?
+    +radio("yes", "approved" , "Yes", "Yes" )
+    +radio("no", "robot" , "No", "Not sure" )

@@ -1,0 +1,55 @@
+//Intro module for the Login Form
+
+.form__intro {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 20px;
+
+  &-row {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+}
+
+.form {
+  &__input {
+    padding: 5px 60px;
+    height: 45px;
+    width: 100%;
+
+    border-radius: 25px;
+    border: none;
+
+    color: $fontgrey;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.form__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: $inputbackground;
+}
+
+.svg {
+
+  &__log_in, &__pass {
+    position: absolute;
+    top: 27%;
+    right: 20%;
+    width: 20px;
+    height: 20px;
+
+    fill: $fontgrey;
+  }
+}
