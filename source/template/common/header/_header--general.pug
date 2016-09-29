@@ -1,0 +1,20 @@
+include ../../mixins/_svg
+
+header.header-general
+  .container
+    include ../_social.pug
+    +svg("hamburger")
+.header
+  .container
+    .row
+      .col-12
+        +svg("portfolio_header")
+        .col-4.col--centered
+          include ../_user.pug
+      +svg("portf_arrow_down")
+    .row
+      +svg("bg")
+      .col-4.col--centered
+        article.header__title
+          +svg("works_header")
+          h1.title__intro My pride

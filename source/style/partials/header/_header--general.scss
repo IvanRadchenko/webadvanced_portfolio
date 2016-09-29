@@ -1,0 +1,45 @@
+//Common header
+.header-general {
+  padding: 30px 0;
+}
+
+.header {
+  height: 700px;
+}
+
+.svg__hamburger {
+  float: right;
+  width: 35px;
+  height:35px;
+}
+
+.svg__portfolio_header {
+  width: 100%;
+  height: auto;
+  font-size: 2.8rem ;
+  position: absolute;
+}
+
+.svg__portf_arrow_down {
+  fill: black;
+  width: 30px;
+  height:30px;
+}
+
+.svg_bg {
+  position: absolute;
+  width: 1200px;
+  height: 100%;
+}
+
+.svg__works_header{
+  fill: black;
+  width: 100%;
+  position: absolute;
+}
+
+.header__title {
+  font-size: 6.2rem;
+  line-height: 1;
+  text-align: center;
+}
