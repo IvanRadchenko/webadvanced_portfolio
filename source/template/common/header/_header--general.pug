@@ -1,8 +1,9 @@
 include ../../mixins/_svg
 
-header.header-general
+header.header__main
+.header-general
   .container
-    include ../_social.pug
+    include ../social/_social--header
     +svg("hamburger")
 .header
   .container
@@ -11,10 +12,15 @@ header.header-general
         +svg("portfolio_header")
         .col-4.col--centered
           include ../_user.pug
-      +svg("portf_arrow_down")
+          .col-1.col--centered
+            .arrow__down
+              +svg("portf_arrow_down")
+  .container
+    +svg("bg")
     .row
-      +svg("bg")
       .col-4.col--centered
-        article.header__title
-          +svg("works_header")
-          h1.title__intro My pride
+        .header__intro
+          article.header__title
+            h1.header__title-intro My pride
+          .scaling-svg-container
+            +svg("works_header")

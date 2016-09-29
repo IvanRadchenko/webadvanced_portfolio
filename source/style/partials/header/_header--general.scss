@@ -1,10 +1,17 @@
 //Common header
+.header__main {
+  background: url("/assets/img/login/1200_forest_login.png") center center;
+}
+
 .header-general {
-  padding: 30px 0;
+  padding: 30px;
+  position: relative;
 }
 
 .header {
-  height: 700px;
+  height: 790px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .svg__hamburger {
@@ -15,31 +22,74 @@
 
 .svg__portfolio_header {
   width: 100%;
-  height: auto;
-  font-size: 2.8rem ;
+  height: 320px;
   position: absolute;
+
 }
 
 .svg__portf_arrow_down {
-  fill: black;
   width: 30px;
   height:30px;
-}
 
-.svg_bg {
-  position: absolute;
-  width: 1200px;
-  height: 100%;
-}
-
-.svg__works_header{
   fill: black;
-  width: 100%;
+}
+
+
+//Portfolio Intro section with several SVGs in a row
+.svg__bg {
   position: absolute;
+  height: 300px;
+  width: 1200px;
+
+  fill: $lightwhite;
+}
+
+.header__intro {
+  position: relative;
+  top: 60px;
 }
 
 .header__title {
-  font-size: 6.2rem;
-  line-height: 1;
+  position: absolute;
+  width: 420px;
+  padding: 30px;
+
   text-align: center;
+  z-index: 1;
+}
+
+.header__title-intro {
+  font-size: 6.3rem;
+  line-height: 1;
+
+  &:after {
+    content:"";
+    border-bottom:3px solid black;
+    width:20%;
+    display:block;
+    padding-top: 30px;
+    margin:0 auto;
+  }
+}
+
+.svg__works_header{
+  //fill: $svgheader;
+  //left: 70px;
+  //position: absolute;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 20px;
+  top:0;
+  fill: $svgheader;
+}
+
+/* Example-specific styles */
+.scaling-svg-container {
+  position: relative;
+  height:0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 50%;
+  /* over-ride this inline for aspect ratio other than square */
 }

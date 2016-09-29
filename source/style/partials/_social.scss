@@ -1,8 +1,9 @@
 //Social module for the Form Welcome
 .social {
   padding: 5px;
-  width: 300px;
-  margin-bottom: 30px;
+  display: inline-block;
+  //width: 300px;
+  margin-bottom: 20px;
 }
 
 .svg--social {
@@ -10,8 +11,14 @@
   width: 35px;
   display: inline-block;
   margin-right: 20px;
+}
 
+.svg--grey {
   fill: $fontgrey;
+}
+
+.svg--white {
+  fill: $white;
 }
 
 .list__social {
@@ -35,4 +42,9 @@
   :hover {
       fill: $btn;
   }
+}
+//Move arrow down, if it is on the page
+.arrow__down  {
+  padding-top: 130px;
+  text-align: center;
 }
