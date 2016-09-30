@@ -1,26 +1,43 @@
 include ../../mixins/_svg
 
 header.header__main
-.header-general
-  .container
-    include ../social/_social--header
-    +svg("hamburger")
-.header
-  .container
-    .row
-      .col-12
-        +svg("portfolio_header")
+  section.musthead
+    .container
+      include ../social/_social--header
+      +svg("hamburger")
+  section.header__body
+    .container
+      .row
+        .col-12
+          +svg("portfolio_header")
+          .col-4.col--centered
+            include ../_user.pug
+            .col-1.col--centered
+              .arrow__down
+                +svg("portf_arrow_down")
+  section.header__footer
+    .container
+      .row
+        .col-12
+          +svg("bg")
         .col-4.col--centered
-          include ../_user.pug
-          .col-1.col--centered
-            .arrow__down
-              +svg("portf_arrow_down")
-  .container
-    +svg("bg")
-    .row
-      .col-4.col--centered
-        .header__intro
-          article.header__title
-            h1.header__title-intro My pride
-          .scaling-svg-container
-            +svg("works_header")
+          .header__intro
+            article.header__title
+              h1.header__title-intro My pride
+            .scaling-svg-container
+              +svg("works_header")
+main
+  section.portfolio
+    .container
+      .row
+        .col-6
+          .portfolio__intro
+            h1.portfolio__intro-title THE WEBSITE OF SCHOOL OF ONLINE EDUCATION
+            p.portfolio__intro-skills HTML, CSS, JAVASCRIPT
+          a.portfolio__button(href="#") Посмотреть сайт
+        .col-6
+s
+          .col-3
+          .col-3
+  section.aboutme
+footer.footer--general

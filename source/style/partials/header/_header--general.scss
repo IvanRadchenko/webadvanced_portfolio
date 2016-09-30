@@ -1,45 +1,55 @@
 //Common header
 .header__main {
-  background: url("/assets/img/login/1200_forest_login.png") center center;
+  position: relative;
+  background: url("../img/header/1200_forest_about.png") center center no-repeat;
+  height: 790px;
 }
 
-.header-general {
+.musthead {
   padding: 30px;
   position: relative;
-}
-
-.header {
-  height: 790px;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .svg__hamburger {
   float: right;
   width: 35px;
   height:35px;
+  fill: $white;
+}
+
+//Header body
+.header__body {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .svg__portfolio_header {
-  width: 100%;
-  height: 320px;
   position: absolute;
+  width: 1140px;
+  height: 320px;
 
+  fill: $portfolioheader;
 }
 
 .svg__portf_arrow_down {
   width: 30px;
   height:30px;
 
-  fill: black;
+  fill: $white;
+}
+
+//Header footer section with several SVGs in a row
+
+.header__footer {
+  height: 307px;
+  position: relative;
 }
 
 
-//Portfolio Intro section with several SVGs in a row
 .svg__bg {
   position: absolute;
   height: 300px;
-  width: 1200px;
+  width: 1140px;
 
   fill: $lightwhite;
 }
@@ -81,7 +91,7 @@
   width: 100%;
   left: 20px;
   top:0;
-  fill: $svgheader;
+  fill: $worksheader;
 }
 
 /* Example-specific styles */
