@@ -3,11 +3,15 @@
   position: relative;
   background: url("../img/header/1200_forest_about.png") center center no-repeat;
   height: 790px;
+  min-width: 1200px;
 }
 
 .musthead {
-  padding: 30px;
   position: relative;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  background:  url(../img/header/headershadow.png) no-repeat center;
 }
 
 .svg__hamburger {
@@ -19,7 +23,6 @@
 
 //Header body
 .header__body {
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -31,11 +34,11 @@
   fill: $portfolioheader;
 }
 
-.svg__portf_arrow_down {
+.svg__portf_arrow_down,.svg__portf_arrow_up {
   width: 30px;
   height:30px;
 
-  fill: $white;
+  fill: black;
 }
 
 //Header footer section with several SVGs in a row
@@ -48,20 +51,22 @@
 
 .svg__bg {
   position: absolute;
-  height: 300px;
-  width: 1140px;
+  height: 287px;
+  width: 1200px;
+  top: 57px;
+  right: 0;
 
   fill: $lightwhite;
 }
 
 .header__intro {
   position: relative;
-  top: 60px;
+  top: 120px;
 }
 
 .header__title {
   position: absolute;
-  width: 420px;
+  width: 375px;
   padding: 30px;
 
   text-align: center;
@@ -83,15 +88,11 @@
 }
 
 .svg__works_header{
-  //fill: $svgheader;
-  //left: 70px;
-  //position: absolute;
   position: absolute;
   height: 100%;
   width: 100%;
   left: 20px;
-  top:0;
-  fill: $worksheader;
+  fill: yellow;
 }
 
 /* Example-specific styles */
@@ -102,4 +103,21 @@
   padding: 0;
   padding-bottom: 50%;
   /* over-ride this inline for aspect ratio other than square */
+}
+.right-angle-arrow.right{
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 200px solid $lightwhite;
+  border-right: 900px solid transparent;
+}
+
+.left-angle-arrow.left {
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 200px solid $lightwhite;
+  border-left: 900px solid transparent;
 }

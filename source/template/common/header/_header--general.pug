@@ -18,7 +18,6 @@ header.header__main
   section.header__footer
     .container
       .row
-        .col-12
           +svg("bg")
         .col-4.col--centered
           .header__intro
@@ -26,18 +25,25 @@ header.header__main
               h1.header__title-intro My pride
             .scaling-svg-container
               +svg("works_header")
+        .col-12
+          .right-angle-arrow.right
+          .left-angle-arrow.left
 main
   section.portfolio
     .container
       .row
         .col-6
           .portfolio__intro
-            h1.portfolio__intro-title THE WEBSITE OF SCHOOL OF ONLINE EDUCATION
+            h1.portfolio__intro-title ONLINE EDUCATION SCHOOL
             p.portfolio__intro-skills HTML, CSS, JAVASCRIPT
-          a.portfolio__button(href="#") Посмотреть сайт
+          a.portfolio__button(href="#") LEARN MORE
         .col-6
-s
+          img.portfolio__work-1(src="../img/work/portfolio1.png")
           .col-3
+            img.portfolio__work-2(src="../img/work/portfolio1.png")
+            +svg("portf_arrow_down")
           .col-3
+            img.portfolio__work-2(src="../img/work/portfolio1.png")
+            +svg("portf_arrow_up")
   section.aboutme
 footer.footer--general
