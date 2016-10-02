@@ -1,10 +1,12 @@
 include ../../mixins/_svg
+include ../../mixins/_inputs
 
 header.header__main
   section.musthead
     .container
-      include ../social/_social--header
-      +svg("hamburger")
+      .musthead__flex
+        include ../social/_social--header
+        +svg("hamburger")
   section.header__body
     .container
       .row
@@ -18,32 +20,113 @@ header.header__main
   section.header__footer
     .container
       .row
+        .col-12
           +svg("bg")
-        .col-4.col--centered
-          .header__intro
-            article.header__title
-              h1.header__title-intro My pride
-            .scaling-svg-container
-              +svg("works_header")
+      .row
+        .col-12.col--centered
+           +svg("works_header")
+      .row
         .col-12
           .right-angle-arrow.right
           .left-angle-arrow.left
-main
-  section.portfolio
+      .row
+        .col-4.col--centered
+          .headlines
+            article.headline__wrapper
+              h1.headline__title My pride
+
+section.portfolio__main
+  .container
+    .row
+      .col-6
+        .portfolio__names
+          h1.portfolio__names-title ONLINE EDUCATION SCHOOL
+          p.portfolio__names-skills HTML, CSS, JAVASCRIPT
+          a.portfolio__names-button(href="#") LEARN MORE
+      .col-6
+        .portfolio__works
+          .portfolio__preview
+            img.portfolio__work-1(src="/assets/img/portfolio_first.png")
+          .portfolio__list
+            .portfolio__item.portfolio__item--left
+              img.portfolio__work-2(src="/assets/img/portfolio_first.png")
+              .portfolio__arrow
+                +svg("portf_arrow_down")
+            .portfolio__item.portfolio__item--right
+              img.portfolio__work-3(src="/assets/img/portfolio_first.png")
+              .portfolio__arrow
+                +svg("portf_arrow_up")
+section.portfolio__aboutme
+  .container
+    .row
+      .col-12.col--centered
+        +svg("about_header")
+      .col-4.col--centered
+        .headlines
+          article.headline__wrapper
+            h1.headline__title About me
+    .row
+      .col-4.col--centered
+        aside.quotations
+          .col-1
+            .quotations__photo
+          .quatations__quote
+            q.quote.
+              This code will overcome any issues. Please, do not load this website
+              on two acient browsers
+          .col-2.col--centered
+            p.quatations__author Kovalchuk Dmitryi
+            p.quatations__jobtitle - Founder of LoftSchool
+      .col-4.col--centered
+        aside.quotations
+          .col-1
+            .quotations__photo
+          .quatations__quote
+            q.quote.
+              This code will overcome any issues. Please, do not load this website
+              on two acient browsers
+          .col-2.col--centered
+            p.quatations__author Zar Zacharov
+            p.quatations__jobtitle - teacher and developer
+    .row
+      .col-4.col--centered
+        .auth__section
+          .forms
+            form.form__body(action="/login" method="post")
+              .form__auth-row.form__auth-row--title
+                h1 Contact me
+              .form__auth-row
+                +input("text", "name", "Name", "name")
+              .form__auth-row
+                +input("email", "email", "Email", "email")
+            footer.form__footer
+              a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/index.html") Submit
+              a.form__footer-btn.form__footer-btn--link.form__footer-btn--right(href="/index.html") Reset
+  footer.footer--general
     .container
       .row
-        .col-6
-          .portfolio__intro
-            h1.portfolio__intro-title ONLINE EDUCATION SCHOOL
-            p.portfolio__intro-skills HTML, CSS, JAVASCRIPT
-          a.portfolio__button(href="#") LEARN MORE
-        .col-6
-          img.portfolio__work-1(src="../img/work/portfolio1.png")
-          .col-3
-            img.portfolio__work-2(src="../img/work/portfolio1.png")
-            +svg("portf_arrow_down")
-          .col-3
-            img.portfolio__work-2(src="../img/work/portfolio1.png")
-            +svg("portf_arrow_up")
-  section.aboutme
-footer.footer--general
+        .footer__body
+          .col-4
+            p This this my masterpiece blog, created under the psycho control of LoftSchool
+          .col-4
+            .footer__middle
+              nav.footer__nav
+                ul.footer__list
+                  li.footer__item
+                    a.footer__link(href="#") My works
+                  li.footer__item
+                    a.footer__link(href="#") About me
+                  li.footer__item
+                    a.footer__link(href="#") Blog
+                  li.footer__item
+                    a.footer__link(href="#") Authorization
+                include ../social/_social--header
+          .col-4
+            p.
+              Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live
+              <br >- Martin Golding
+      .row
+        .footer__copyright--general
+          p @ Ivan Radchenko | Love and Hate creation as part of LoftSchool | 2016
+
+

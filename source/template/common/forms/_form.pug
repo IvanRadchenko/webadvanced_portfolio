@@ -5,16 +5,16 @@ section.auth__section
   .container
     .row
       .col-4.col--centered
-        .login#login
-          form.form__login(action="/login" method="post")
+        .forms#login
+          form.form__body(action="/login" method="post")
            include ../forms/_form__auth
            include ../forms/_form__robot
           footer.form__footer
             a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/index.html") Main page
             input.form__footer-btn.form__footer-btn--submit.form__footer-btn--right(type="submit" name="submit" value="Login")
       .col-4.col--centered
-        .welcome#login
-          form.form__welcome(action="/login" method="post")
+        .forms#welcome
+          form.form__body(action="/login" method="post")
             include ../_user
             include ../social/_social--login
           footer.form__footer

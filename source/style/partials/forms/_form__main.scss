@@ -3,11 +3,10 @@
 .auth__section {
   padding-top: 35px;
   padding-bottom: 55px;
-  min-height: 100%;
   position: relative;
 }
 
-.login, .welcome {
+.forms {
   min-width: 380px;
 
   background-color: $darlform;
@@ -17,7 +16,7 @@
   @extend %clearfix;
 }
 
-.form__login, .form__welcome {
+.form__body {
   padding: 6px 20px 0 20px;
   margin-bottom: 20px;
 }

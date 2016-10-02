@@ -12,18 +12,23 @@
   padding-bottom: 60px;
 
   background:  url(../img/header/headershadow.png) no-repeat center;
+
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .svg__hamburger {
-  float: right;
-  width: 35px;
-  height:35px;
+  margin-left: auto;
+  width: 45px;
+  height:45px;
   fill: $white;
 }
 
 //Header body
 .header__body {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .svg__portfolio_header {
@@ -44,8 +49,8 @@
 //Header footer section with several SVGs in a row
 
 .header__footer {
-  height: 307px;
   position: relative;
+  height: 307px;
 }
 
 
@@ -53,27 +58,26 @@
   position: absolute;
   height: 287px;
   width: 1200px;
-  top: 57px;
   right: 0;
+  top: 60px;
 
   fill: $lightwhite;
 }
 
-.header__intro {
+.headlines {
   position: relative;
-  top: 120px;
+  top: 100px;
+  z-index: 2;
 }
 
-.header__title {
-  position: absolute;
+.headline__wrapper {
   width: 375px;
   padding: 30px;
-
   text-align: center;
   z-index: 1;
 }
 
-.header__title-intro {
+.headline__title {
   font-size: 6.3rem;
   line-height: 1;
 
@@ -87,22 +91,15 @@
   }
 }
 
-.svg__works_header{
+.svg {
+  &__works_header, &__about_header{
   position: absolute;
-  height: 100%;
+  height: 160px;
   width: 100%;
-  left: 20px;
-  fill: yellow;
+  top: 130px;
+  z-index: 1;
+  fill: $worksheader;
 }
-
-/* Example-specific styles */
-.scaling-svg-container {
-  position: relative;
-  height:0;
-  width: 100%;
-  padding: 0;
-  padding-bottom: 50%;
-  /* over-ride this inline for aspect ratio other than square */
 }
 .right-angle-arrow.right{
   position: absolute;
@@ -115,9 +112,227 @@
 
 .left-angle-arrow.left {
   position: absolute;
+  top: 0;
   right: 0;
   width: 0;
   height: 0;
   border-bottom: 200px solid $lightwhite;
   border-left: 900px solid transparent;
+}
+
+//Portfolio body Section
+.portfolio__main {
+  height: 750px;
+}
+
+.portfolio__names {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 -20px;
+  height: 750px;
+
+  text-align: center;;
+  background-color: $portfoliolight;
+
+  &-title {
+    color: $darkgrey;
+
+    &:after {
+        content:"";
+        border-bottom:3px solid black;
+        width:20%;
+        display:block;
+        padding-top: 25px;
+        margin:0 auto;
+      }
+    }
+
+  &-skills {
+    margin-bottom: 40px;
+    font-family: "robotomedium", Arial, san-serif;
+    color: $btn;
+  }
+
+  &-button {
+    display: inline-block;
+    width: 200px;
+    height:45px;
+    padding: 10px;
+    background-color: $btn;
+    border-radius: 25px;
+    color: $white;
+    text-decoration: none;
+
+    &:before {
+      background: url("../img/sprite/link.svg") no-repeat scroll center center;
+      content: "";
+      display: inline-block;
+      fill: $white;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: -2px;
+      left: -15px;
+      vertical-align: middle;
+    }
+  }
+}
+
+//Portfolio Work Examples section
+.portfolio__works {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -20px;
+  height: 750px;
+  background-color: $greenworks;
+}
+.portfolio__preview {
+  flex: 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 450px;
+    height: 320px;
+  }
+}
+
+.portfolio__list {
+  height: 225px;
+  display: flex;
+}
+
+.portfolio__item {
+  width: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 100%;
+    height: 90%;
+  }
+
+  &--left:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    background-color: $portleft;
+  }
+
+  &--right:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    background-color: $portright;
+  }
+}
+
+.portfolio__arrow {
+  position: absolute;
+
+  & .svg__portf_arrow_up,.svg__portf_arrow_down  {
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+}
+
+
+
+
+//Portfolio about me section
+
+.portfolio__aboutme {
+  background: url("../img/1200_forest_works.png") no-repeat bottom;
+}
+
+
+
+
+
+///Footer Portfolio
+
+.footer--general {  //Cascade for SVG social color
+  .social svg {
+    fill: $fontgrey;
+  }
+
+  &:hover {
+    fill: $white;
+  }
+}
+
+.footer__body {
+  display: flex;
+  padding: 20px;
+  background-color: $footertop;
+  font-family: "robotolight", Arial, san-serif;
+  color: $fontgrey;
+  @extend %clearfix;
+ }
+
+.footer__middle {
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 85px;
+    width: 1px;
+    border-right: 1px solid $fontgrey;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 85px;
+    width: 1px;
+    border-left: 1px solid $fontgrey ;  }
+}
+
+.footer__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  padding: 0;
+}
+
+.footer__item {
+  list-style: none;
+  display: inline-block;
+}
+
+.footer__link {
+  display: block;
+  text-decoration: none;
+  font-family: "robotomedium", Arial, san-serif;
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__copyright--general {
+  background-color: $copyright;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 0.5;
+  color: #ffffff;
 }
