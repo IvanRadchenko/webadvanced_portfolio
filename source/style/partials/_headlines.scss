@@ -1,0 +1,66 @@
+.headlines {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+
+  &__title--portintro {
+    line-height: 1.2;
+  }
+
+  &__title--aboutme {
+    line-height: 1;
+    margin: 0;
+  }
+
+  &--portintro {
+    background-color: $lightwhite;
+    top: 145px;
+  }
+
+  &--aboutme {
+    background: $portabouthead;
+    padding-top: 55px;
+  }
+}
+
+.headlines__title {
+  color: $headlines;
+
+  &:after {
+    content:"";
+    border-bottom:3px solid black;
+    width: 30%;
+    display:block;
+    margin:0 auto;
+  }
+
+  &--portintro:after {
+    padding-top: 20px;
+  }
+
+  &--aboutme:after {
+    padding-top: 35px;
+  }
+}
+
+.svg {
+  &__works_header, &__about_header {
+    position: absolute;
+    fill: $worksheader;
+  }
+
+  &__works_header {
+    height: 160px;
+    width: 100%;
+  }
+
+  &__about_header {
+    top: 20px;
+    height: 180px;
+    width: 100%;
+  }
+}

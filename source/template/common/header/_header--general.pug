@@ -19,28 +19,26 @@ header.header__main
                 +svg("portf_arrow_down")
   section.header__footer
     .container
-      .row
-        .col-12
-          +svg("bg")
+      //.row   //A try to impelement the SVg background
+      //  .col-12
+      //    +svg("bg")
       .row
         .col-12.col--centered
-           +svg("works_header")
+
       .row
         .col-12
           .right-angle-arrow.right
           .left-angle-arrow.left
       .row
-        .col-4.col--centered
-          .headlines
-            article.headline__wrapper
-              h1.headline__title My pride
-
+        .headlines.headlines--portintro
+          h1.headlines__title.headlines__title--portintro My pride
+          +svg("works_header")
 section.portfolio__main
   .container
     .row
       .col-6
         .portfolio__names
-          h1.portfolio__names-title ONLINE EDUCATION SCHOOL
+          h2.portfolio__names-title ONLINE EDUCATION <br> SCHOOL
           p.portfolio__names-skills HTML, CSS, JAVASCRIPT
           a.portfolio__names-button(href="#") LEARN MORE
       .col-6
@@ -59,42 +57,40 @@ section.portfolio__main
 section.portfolio__aboutme
   .container
     .row
-      .col-12.col--centered
+      .headlines.headlines--aboutme
+        h1.headlines__title.headlines__title--aboutme Customer <br> satisfaction
         +svg("about_header")
-      .col-4.col--centered
-        .headlines
-          article.headline__wrapper
-            h1.headline__title About me
     .row
-      .col-4.col--centered
-        aside.quotations
-          .col-1
-            .quotations__photo
-          .quatations__quote
-            q.quote.
-              This code will overcome any issues. Please, do not load this website
-              on two acient browsers
-          .col-2.col--centered
-            p.quatations__author Kovalchuk Dmitryi
-            p.quatations__jobtitle - Founder of LoftSchool
-      .col-4.col--centered
-        aside.quotations
-          .col-1
-            .quotations__photo
-          .quatations__quote
-            q.quote.
-              This code will overcome any issues. Please, do not load this website
-              on two acient browsers
-          .col-2.col--centered
-            p.quatations__author Zar Zacharov
-            p.quatations__jobtitle - teacher and developer
+      aside.quotes
+        .col-4
+          .quotes__body
+            .quotes__photobox
+              img.quotes__photo(src="../assets/img/login/Vanya.jpg")
+            q.quote
+              | This code will overcome any issues. Please, do not load this website
+              | on two acient browsers
+              img.quote__mark(src="../assets/img/quote.png")
+            .quotes__info
+              p.quotes__author Kovalchuk Dmitryi
+              p.quotes__jobtitle - Founder of LoftSchool
+        .col-4
+          .quotes__body
+            .quotes__photobox
+              img.quotes__photo(src="../assets/img/login/Vanya.jpg")
+            q.quote
+              | This code will overcome any issues. Please, do not load this website
+              | on two acient browsers
+              img.quote__mark(src="../assets/img/quote.png")
+            .quotes__info
+              p.quotes__author Zar Zacharov
+              p.quotes__jobtitle - Teacher and developer
     .row
-      .col-4.col--centered
+      .col-4
         .auth__section
           .forms
             form.form__body(action="/login" method="post")
               .form__auth-row.form__auth-row--title
-                h1 Contact me
+                h2 Contact me
               .form__auth-row
                 +input("text", "name", "Name", "name")
               .form__auth-row

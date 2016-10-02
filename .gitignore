@@ -12,6 +12,7 @@
 *.vi
 *~
 
+
 # OS or Editor folders
 *.sublime-grunt.cache
 *.sublime-project
@@ -40,3 +41,4 @@ fonts
 # Node.JS
 node_modules
 npm-debug.log
+build./
