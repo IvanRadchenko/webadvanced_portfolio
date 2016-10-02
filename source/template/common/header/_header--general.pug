@@ -85,19 +85,20 @@ section.portfolio__aboutme
               p.quotes__author Zar Zacharov
               p.quotes__jobtitle - Teacher and developer
     .row
-      .col-4
-        .auth__section
-          .forms
-            form.form__body(action="/login" method="post")
-              .form__auth-row.form__auth-row--title
-                h2 Contact me
-              .form__auth-row
-                +input("text", "name", "Name", "name")
-              .form__auth-row
-                +input("email", "email", "Email", "email")
-            footer.form__footer
-              a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/index.html") Submit
-              a.form__footer-btn.form__footer-btn--link.form__footer-btn--right(href="/index.html") Reset
+      aside.contactme
+        .col-4
+          .auth__section
+            .forms
+              form.form__body(action="/login" method="post")
+                .form__auth-row.form__auth-row--title
+                  h2 Contact me
+                .form__auth-row
+                  +input("text", "name", "Name", "name")
+                .form__auth-row
+                  +input("email", "email", "Email", "email")
+              footer.form__footer
+                a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/index.html") Submit
+                a.form__footer-btn.form__footer-btn--link.form__footer-btn--right(href="/index.html") Reset
   footer.footer--general
     .container
       .row

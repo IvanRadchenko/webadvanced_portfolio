@@ -104,7 +104,7 @@
 
   &-title {
     color: $darkgrey;
-    margin: 0;
+    margin-bottom: 20px;
 
     &:after {
         content:"";
@@ -222,89 +222,4 @@
 .portfolio__aboutme {
   position: relative;
   background: url("../img/1200_forest_works.png") no-repeat bottom;
-}
-
-
-///Footer Portfolio
-
-.footer--general {  //Cascade for SVG social color
-  .social svg {
-    fill: $fontgrey;
-  }
-
-  &:hover {
-    fill: $white;
-  }
-}
-
-.footer__body {
-  display: flex;
-  padding: 20px;
-  background-color: $footertop;
-  font-family: "robotolight", Arial, san-serif;
-  color: $fontgrey;
-  @extend %clearfix;
- }
-
-.footer__middle {
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 0;
-    height: 85px;
-    width: 1px;
-    border-right: 1px solid $fontgrey;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 0;
-    height: 85px;
-    width: 1px;
-    border-left: 1px solid $fontgrey ;  }
-
-  & .social {
-    justify-content: flex-start;
-
-    &__link {
-      margin-left: 0;
-      margin-right: 20px;
-    }
-  }
-}
-
-.footer__list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-
-  padding: 0;
-}
-
-.footer__item {
-  list-style: none;
-  display: inline-block;
-}
-
-.footer__link {
-  display: block;
-  text-decoration: none;
-  font-family: "robotomedium", Arial, san-serif;
-  color: $white;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.footer__copyright--general {
-  background-color: $copyright;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  line-height: 0.5;
-  color: #ffffff;
 }
