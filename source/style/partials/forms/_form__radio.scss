@@ -38,24 +38,3 @@
     }
   }
 }
-
-//General Radio and Checkbox styles
-.control {
-  display: inline-block;
-  padding-left: 30px;
-  position: relative;
-  cursor: pointer;
-
-  &:before {
-    content: '';
-    display: inline-block;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    left: 0;
-    bottom: 1px;
-    background-color: $white;
-  }
-}
