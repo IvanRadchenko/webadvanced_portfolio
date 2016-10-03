@@ -7,7 +7,7 @@
 }
 
 .forms {
-  min-width: 380px;
+  width: 380px;
 
   background-color: $darlform;
   text-align: center;
@@ -17,9 +17,13 @@
 }
 
 .form__body {
-  padding: 6px 20px 0 20px;
+  padding: 20px 20px 0 20px;
   margin-bottom: 20px;
 }
 
-@import "form--login";
-@import "form--welcome";
+//Login
+@import "form__auth";
+@import "form__checkbox";
+@import "form__footer";
+@import "form__radio";
+@import "form__textarea";

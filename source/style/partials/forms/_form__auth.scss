@@ -26,7 +26,7 @@
 
 .form {
   &__input {
-    padding: 5px 60px;
+    padding: 5px 60px 5px 20px;
     height: 45px;
     width: 100%;
 
@@ -35,8 +35,9 @@
 
     color: $fontgrey;
 
-    &:focus {
-      outline: none;
+    &--nosvg {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }
@@ -65,3 +66,4 @@
     fill: $fontgrey;
   }
 }
+

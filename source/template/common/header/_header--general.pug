@@ -89,16 +89,22 @@ section.portfolio__aboutme
         .col-4
           .auth__section
             .forms
-              form.form__body(action="/login" method="post")
+              form.form__body.form__body--blured(action="/login" method="post")
                 .form__auth-row.form__auth-row--title
                   h2 Contact me
                 .form__auth-row
-                  +input("text", "name", "Name", "name")
+                  +inputnosvg("text", "name", "Name", "name")
                 .form__auth-row
-                  +input("email", "email", "Email", "email")
+                  +inputnosvg("email", "email", "Email", "email")
+                .form__auth-row
+                  textarea.form__textarea(placeholder="Your message" cols="35" rows="5" id="message" name="message")
               footer.form__footer
-                a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/index.html") Submit
+                input.form__footer-btn.form__footer-btn--submit.form__footer-btn--left(type="submit" name="submit" value="Submit")
                 a.form__footer-btn.form__footer-btn--link.form__footer-btn--right(href="/index.html") Reset
+    .row
+      .col-4.col--centered
+        aside.arrow__up
+          +svg("portf_arrow_up")
   footer.footer--general
     .container
       .row

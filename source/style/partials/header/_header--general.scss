@@ -215,11 +215,26 @@
 }
 
 
-
-
 //Portfolio about me section
 
 .portfolio__aboutme {
   position: relative;
   background: url("../img/1200_forest_works.png") no-repeat bottom;
+}
+
+.contactme {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+//Arrow Up
+.arrow__up {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+
+  & svg {
+    fill: $white;
+  }
 }

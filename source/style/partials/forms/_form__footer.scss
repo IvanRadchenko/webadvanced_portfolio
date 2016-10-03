@@ -8,6 +8,7 @@
     align-items: center;
     height: 45px;
 
+    //Common form button styles
     &-btn {
       flex: 1;
       display: block;
@@ -28,6 +29,7 @@
         line-height: 45px;
       }
 
+      //Submit buttons for the forms
       &--submit {
         border: none;
         cursor: pointer;
@@ -37,6 +39,7 @@
         }
       }
 
+      //Button order styles - max 3 in a row
       &--left {
         border-right: 1px $fontgrey solid;
       }

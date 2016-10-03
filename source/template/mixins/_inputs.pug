@@ -11,3 +11,6 @@ mixin input(type, id, val, svgid)
     input.form__input(type= type, name= id, id= id, placeholder= val,autocomplete="off")
     label.form__label(for= id)
       +svg(svgid)
+
+mixin inputnosvg(type, id, val, svgid)
+  input.form__input.form__input--nosvg(type= type, name= id, id= id, placeholder= val,autocomplete="off")
