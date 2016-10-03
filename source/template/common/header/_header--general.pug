@@ -1,5 +1,4 @@
-include ../../mixins/_svg
-include ../../mixins/_inputs
+include ../../mixins/_user
 
 header.header__main
   section.musthead
@@ -13,123 +12,14 @@ header.header__main
         .col-12
           +svg("portfolio_header")
           .col-4.col--centered
-            include ../_user.pug
+            +profile("general")
             .col-1.col--centered
               .arrow__down
                 +svg("portf_arrow_down")
-  section.header__footer
-    .container
-      //.row   //A try to impelement the SVg background
-      //  .col-12
-      //    +svg("bg")
-      .row
-        .col-12.col--centered
-
-      .row
-        .col-12
-          .right-angle-arrow.right
-          .left-angle-arrow.left
-      .row
-        .headlines.headlines--portintro
-          h1.headlines__title.headlines__title--portintro My pride
-          +svg("works_header")
-section.portfolio__main
-  .container
-    .row
-      .col-6
-        .portfolio__names
-          h2.portfolio__names-title ONLINE EDUCATION <br> SCHOOL
-          p.portfolio__names-skills HTML, CSS, JAVASCRIPT
-          a.portfolio__names-button(href="#") LEARN MORE
-      .col-6
-        .portfolio__works
-          .portfolio__preview
-            img.portfolio__work-1(src="/assets/img/portfolio_first.png")
-          .portfolio__list
-            .portfolio__item.portfolio__item--left
-              img.portfolio__work-2(src="/assets/img/portfolio_first.png")
-              .portfolio__arrow
-                +svg("portf_arrow_down")
-            .portfolio__item.portfolio__item--right
-              img.portfolio__work-3(src="/assets/img/portfolio_first.png")
-              .portfolio__arrow
-                +svg("portf_arrow_up")
-section.portfolio__aboutme
-  .container
-    .row
-      .headlines.headlines--aboutme
-        h1.headlines__title.headlines__title--aboutme Customer <br> satisfaction
-        +svg("about_header")
-    .row
-      aside.quotes
-        .col-4
-          .quotes__body
-            .quotes__photobox
-              img.quotes__photo(src="../assets/img/login/Vanya.jpg")
-            q.quote
-              | This code will overcome any issues. Please, do not load this website
-              | on two acient browsers
-              img.quote__mark(src="../assets/img/quote.png")
-            .quotes__info
-              p.quotes__author Kovalchuk Dmitryi
-              p.quotes__jobtitle - Founder of LoftSchool
-        .col-4
-          .quotes__body
-            .quotes__photobox
-              img.quotes__photo(src="../assets/img/login/Vanya.jpg")
-            q.quote
-              | This code will overcome any issues. Please, do not load this website
-              | on two acient browsers
-              img.quote__mark(src="../assets/img/quote.png")
-            .quotes__info
-              p.quotes__author Zar Zacharov
-              p.quotes__jobtitle - Teacher and developer
-    .row
-      aside.contactme
-        .col-4
-          .auth__section
-            .forms
-              form.form__body.form__body--blured(action="/login" method="post")
-                .form__auth-row.form__auth-row--title
-                  h2 Contact me
-                .form__auth-row
-                  +inputnosvg("text", "name", "Name", "name")
-                .form__auth-row
-                  +inputnosvg("email", "email", "Email", "email")
-                .form__auth-row
-                  textarea.form__textarea(placeholder="Your message" cols="35" rows="5" id="message" name="message")
-              footer.form__footer
-                input.form__footer-btn.form__footer-btn--submit.form__footer-btn--left(type="submit" name="submit" value="Submit")
-                a.form__footer-btn.form__footer-btn--link.form__footer-btn--right(href="/index.html") Reset
-    .row
-      .col-4.col--centered
-        aside.arrow__up
-          +svg("portf_arrow_up")
-  footer.footer--general
+  section.header__triangles
     .container
       .row
-        .footer__body
-          .col-4
-            p This this my masterpiece blog, created under the psycho control of LoftSchool
-          .col-4
-            .footer__middle
-              nav.footer__nav
-                ul.footer__list
-                  li.footer__item
-                    a.footer__link(href="#") My works
-                  li.footer__item
-                    a.footer__link(href="#") About me
-                  li.footer__item
-                    a.footer__link(href="#") Blog
-                  li.footer__item
-                    a.footer__link(href="#") Authorization
-                include ../social/_social--header
-          .col-4
-            p.
-              Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live
-              <br >- Martin Golding
-      .row
-        .footer__copyright--general
-          p @ Ivan Radchenko | Love and Hate creation as part of LoftSchool | 2016
-
-
+        .col-6
+          .angle-arrow.angle-arrow--right
+        .col-6
+          .angle-arrow.angle-arrow--left

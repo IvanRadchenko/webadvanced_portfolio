@@ -1,4 +1,27 @@
 extends ../_template
+
+include ../mixins/_svg
+include ../mixins/_inputs
+
 block content
   include ../common/header/_header--general
-  include ../common/footer/_footer--general
+  section.headline
+    .container
+      .row
+        .headlines.headlines--portintro
+          h1.headlines__title.headlines__title--portintro My pride
+          +svg("works_header")
+  include ../common/portfolio/_portfolio-works
+  section.portfolio__aboutme
+    .container
+      .row
+        .headlines.headlines--aboutme
+          h1.headlines__title.headlines__title--aboutme Customer <br> satisfaction
+          +svg("about_header")
+      include ../common/portfolio/_portfolio-quotes
+      include ../common/portfolio/_portfolio-contactme
+      .row
+        .col-4.col--centered
+          aside.arrow__up
+            +svg("portf_arrow_up")
+    include ../common/footer/_footer--general
