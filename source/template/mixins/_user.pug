@@ -1,0 +1,15 @@
+mixin profile(type)
+  if type === "general"
+    .profile
+      .profile__userpic
+        img.profile__photo(src="../assets/img/login/Vanya.jpg")
+      .profile__description
+        h2.profile__name Ivan Radchenko
+        p.profile__own Blog and portfolio
+  else if type === "blog"
+    .profile
+      .profile__userpic
+        img.profile__photo(src="../assets/img/login/Vanya.jpg")
+      .profile__description
+        h1.profile__blog Blog
+        p.profile__own Blog and portfolio

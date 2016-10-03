@@ -1,10 +1,15 @@
+.headline {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: $lightwhite;
+}
+
 .headlines {
   position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   text-align: center;
-  padding-top: 10px;
   text-transform: uppercase;
 
   &__title--portintro {
@@ -17,10 +22,6 @@
     margin: 0;
   }
 
-  &--portintro {
-    background-color: $lightwhite;
-    top: 145px;
-  }
 
   &--aboutme {
     background: $portabouthead;

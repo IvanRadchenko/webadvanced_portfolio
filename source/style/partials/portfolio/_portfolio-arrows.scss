@@ -1,0 +1,27 @@
+//Arrows
+.arrow__up {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+
+  & svg {
+    fill: $white;
+  }
+}
+
+.arrow__down  {
+  position: absolute;
+  top: 95px;
+  left: 25px;
+
+  & svg {
+    fill: $white;
+  }
+}
+
+.svg__portf_arrow_down,.svg__portf_arrow_up {
+  width: 30px;
+  height:30px;
+
+  fill: $white;
+}
