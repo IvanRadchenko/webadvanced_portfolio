@@ -13,7 +13,7 @@
 .musthead {
   position: relative;
   padding-top: 30px;
-  padding-bottom: 65px;
+  margin-bottom: 65px;
 
   background:  url(../img/header/headershadow.png) no-repeat center;
 
@@ -69,6 +69,20 @@
     top: 0;
     right: 0;
     border-bottom: 150px solid $lightwhite;
+    border-left: 900px solid transparent;
+  }
+
+  &--rightblog {
+    top: 270px;
+    left: 0;
+    border-bottom: 90px solid $blogback;
+    border-right: 900px solid transparent;
+  }
+
+  &--leftblog{
+    top: 270px;
+    right: 0;
+    border-bottom: 90px solid $blogback;
     border-left: 900px solid transparent;
   }
 }
