@@ -1,5 +1,6 @@
 include ../../mixins/_svg
 include ../../mixins/_inputs
+include ../../mixins/_user
 
 section.auth__section
   .container
@@ -15,9 +16,9 @@ section.auth__section
       .col-4.col--centered
         .forms#welcome
           form.form__body(action="/login" method="post")
-            include ../../mixins/_user
+            +profile("general")
             include ../social/_social--login
           footer.form__footer
-            a.form__footer-btn.form__footer-btn--link.form__footer-btn--big(href="/portfolio.html") My shame
-            a.form__footer-btn.form__footer-btn--link.form__footer-btn--middle(href="/index.html") About me
-            a.form__footer-btn.form__footer-btn--link.form__footer-btn--small(href="/index.html") Blog
+            a.form__footer-btn.form__footer-btn--link.form__footer-btn--big(href="/portfolio.html") My pride
+            a.form__footer-btn.form__footer-btn--link.form__footer-btn--middle(href="/portfolio.html") About me
+            a.form__footer-btn.form__footer-btn--link.form__footer-btn--small(href="/blog.html") Blog
