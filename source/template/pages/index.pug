@@ -1,0 +1,25 @@
+extends ../_template
+
+include ../mixins/_svg
+block content
+  include ../common/header/_header--general
+
+  section.map__section
+    .container
+      .row
+        .map
+          .col-4
+            ul.contacts__list
+              li.constacts__item
+                a.contacts__link ivan_zacharov
+                  +svg("skype")
+              li.constacts__item
+                a.contacts__link radchenk@gmail.com
+                  +svg("envelope")
+              li.constacts__item
+                a.contacts__link +7 952 354 32 73
+                  +svg("phone")
+              li.constacts__item
+                a.contacts__link
+                  +svg("map_marker")
+    include ../common/footer/_footer--general
