@@ -24,7 +24,7 @@
   &:after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0;
     height: 85px;
     width: 1px;
@@ -33,7 +33,7 @@
   &:before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 0;
     height: 85px;
     width: 1px;
@@ -71,6 +71,17 @@
   &:hover {
     text-decoration: underline;
   }
+}
+.footer__quote {
+  color: rgba($white, .5);
+}
+
+.footer__quote-text {
+  font-family: "robotoitalic", Arial, san-serif;
+}
+
+.footer__quote-author {
+    font-family: "robotomedium_italic", Arial, san-serif;
 }
 
 .footer__copyright--general {

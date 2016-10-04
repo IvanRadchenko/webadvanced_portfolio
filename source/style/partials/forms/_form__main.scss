@@ -1,9 +1,11 @@
 //Summary of all form styles
 
 .auth__section {
+  display: flex;
+  justify-content: center;
+  position: relative;
   padding-top: 35px;
   padding-bottom: 55px;
-  position: relative;
 }
 
 .forms {
@@ -49,4 +51,3 @@
 @import "form__footer";
 @import "form__radio";
 @import "form__textarea";
-@import "partials/portfolio/contactme";

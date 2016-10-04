@@ -9,22 +9,17 @@
 
 
 @import "base/layout";
-@import "common/greating";
 @import "partials/header/_header--general";
+@import "partials/header/_header--blog";
 @import "partials/header/_header--login";
-@import "partials/_portfolio";
+@import "partials/portfolio/_portfolio";
 @import "partials/_menu";
-@import "partials/_slider";
 @import "partials/forms/_form__main";
 @import "partials/_map";
 @import "partials/_blog";
 @import "partials/footer/_footer--login";
 @import "partials/footer/_footer--general";
 
-//portfolio
-@import "partials/_headlines";
-@import "partials/portfolio/_quotes";
-@import "partials/portfolio/_contactme";
 
 //User section with Pics
 @import "partials/user";

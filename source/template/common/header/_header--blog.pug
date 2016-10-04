@@ -1,0 +1,17 @@
+include ../../mixins/_user
+
+header.header__main
+  section.musthead.musthead--blog
+    .container
+      .musthead__flex
+        include ../social/_social--header
+        +svg("hamburger")
+  section.header__blog
+    .container
+      .row
+        .col-12
+          +svg("blog_header")
+          .col-4.col--centered
+            +profile("blog")
+          .angle-arrow.angle-arrow--rightblog
+          .angle-arrow.angle-arrow--leftblog

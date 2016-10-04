@@ -1,7 +1,42 @@
 extends ../_template
 
-block variables
-  - var title = 'Home page'
-
+include ../mixins/_svg
 block content
-  include ../common/_greating
+  include ../common/header/_header--general
+  section.aboutme__body
+    .container
+      .row
+        .col-6
+          section.about
+            img
+            h1.who Who am I
+            p.about__text
+        .col-6
+          section.skills
+            h2.skills_title My skills
+            p.skills__text
+            section.skills__box
+
+  section.map__section#map
+      .container
+        .row
+          .map
+            .col-4
+              .contacts
+                h1.contacts__title Contacts
+                .contacts__wrapper
+                  ul.contacts__list
+                    li.contacts__item
+                      p.contacts__content ivan_zacharov
+                        +svg("skype")
+                    li.contacts__item
+                      p.contacts__content radchenk@gmail.com
+                        +svg("envelope")
+                    li.contacts__item
+                      p.contacts__content +7 952 354 32 73
+                        +svg("phone")
+                    li.contacts__item
+                      p.contacts__content St Petersburg
+                        +svg("map_marker")
+  include ../common/footer/_footer--general
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxRe3o4BgMUHxDenPDRrGo9es-bFDbTmE&callback=initMap")
