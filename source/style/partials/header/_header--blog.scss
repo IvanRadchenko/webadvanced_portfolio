@@ -1,0 +1,30 @@
+//New Header part
+.musthead--blog {
+  margin-bottom: 15px;
+}
+
+.svg__blog_header {
+  position: absolute;
+  width: 1140px;
+  height: 250px;
+  top: 90px;
+
+  fill: $portfolioheader;
+}
+
+//User Blog styles
+
+.profile__blog {
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  &:after {
+    content:"";
+    display:block;
+    margin:0 auto;
+    padding-top: 30px;
+    border-bottom:3px solid $white;
+    width: 30%;
+  }
+}
