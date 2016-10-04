@@ -1,3 +1,4 @@
+//New Header part
 .musthead--blog {
   margin-bottom: 15px;
 }
@@ -10,6 +11,8 @@
 
   fill: $portfolioheader;
 }
+
+//User Blog styles
 
 .profile__blog {
   color: $white;
@@ -26,10 +29,12 @@
   }
 }
 
+//Blog main section
 
 .blog__body {
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding-top: 35px;
@@ -52,10 +57,12 @@
 .blog__link {
   display: block;
   padding-right: 15px;
+  color: $darkgrey;
 
   &:hover {
     color: $btn;
     cursor: pointer;
+    font-family: "robotobold", Arial, san-serif;
   }
 
   &--active {
@@ -64,6 +71,9 @@
   }
 }
 
+.blogpost_section {
+  margin-left: 80px;
+}
 
 .blogpost {
   margin-bottom: 65px;
@@ -77,6 +87,7 @@
 
   &__title {
     margin: 0 0 20px 0;
+    color: $darkgrey;
   }
 
   &__date {

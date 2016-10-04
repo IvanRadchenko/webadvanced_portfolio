@@ -75,14 +75,14 @@
   &--rightblog {
     top: 270px;
     left: 0;
-    border-bottom: 90px solid $blogback;
+    border-bottom: 170px solid $blogback;
     border-right: 900px solid transparent;
   }
 
   &--leftblog{
     top: 270px;
     right: 0;
-    border-bottom: 90px solid $blogback;
+    border-bottom: 170px solid $blogback;
     border-left: 900px solid transparent;
   }
 }
