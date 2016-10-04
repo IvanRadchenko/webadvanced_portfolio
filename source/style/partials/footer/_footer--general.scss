@@ -72,6 +72,17 @@
     text-decoration: underline;
   }
 }
+.footer__quote {
+  color: rgba($white, .5);
+}
+
+.footer__quote-text {
+  font-family: "robotoitalic", Arial, san-serif;
+}
+
+.footer__quote-author {
+    font-family: "robotomedium_italic", Arial, san-serif;
+}
 
 .footer__copyright--general {
   background-color: $copyright;
