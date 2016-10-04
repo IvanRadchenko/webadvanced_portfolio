@@ -3,9 +3,48 @@
 //Map
 
 .map__section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
   width: 1200px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .map {
   height: 790px;
+  margin: 0 auto;
+}
+
+.contacts {
+  display: flex;
+  flex-flow: row wrap;
+  width: 380px;
+  height: 300px;
+  padding: 30px;
+  z-index: 9999;
+}
+
+.contacts__list {
+  list-style: none;
+}
+
+.contacts__content {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 25px;
+}
+
+.contacts__title {
+  margin: 0 auto;
+}
+
+.contacts__content svg {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  fill: $btn;
 }
