@@ -1,0 +1,48 @@
+//Contact Form section
+.contacts {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 380px;
+  padding: 30px;
+  margin: auto;
+  background: rgba($portabouthead,.85);
+  z-index: 2;
+}
+
+.contacts__list {
+  padding: 0;
+  list-style: none;
+  color: $fontmaingrey;
+}
+
+.contacts__content {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+}
+
+.contacts__title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: $darkgrey;
+
+  &:after {
+    content:"";
+    border-bottom:3px solid black;
+    width: 50%;
+    padding-top: 20px;
+    display: block;
+    margin:0 auto;
+  }
+}
+
+.contacts__content svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  fill: $btn;
+}
+

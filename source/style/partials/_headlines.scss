@@ -66,3 +66,24 @@
     width: 100%;
   }
 }
+
+//Headlines of the Aboutme Page
+.headlines--about {
+  width: 80%;
+
+  & .svg__about_header {
+    top: -50px;
+    height: 150px;
+  }
+}
+
+.headlines__title--about {
+  text-align: center;
+  color: $darkgrey;
+
+  &:after {
+    padding-top: 10px;
+    border-color: $darkgrey;
+  }
+}
+

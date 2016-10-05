@@ -1,0 +1,24 @@
+//Map
+.map__section {
+  display: flex;
+  flex-flow: wrap column;
+  position: relative;
+  overflow: hidden;
+  width: 1200px;
+  height: 980px;
+  margin: 0 auto;
+
+  & .footer--general {
+    margin-top: auto;
+  }
+}
+
+.map__section-map {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+

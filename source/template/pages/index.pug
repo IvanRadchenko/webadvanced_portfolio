@@ -3,40 +3,44 @@ extends ../_template
 include ../mixins/_svg
 block content
   include ../common/header/_header--general
-  section.aboutme__body
+  main.aboutme__body
     .container
       .row
         .col-6
-          .headlines.headlines--about
-            h1.headlines__title.headlines__title--about About me
-            +svg("about_header")
-          section.about
-            .img__profile
-              img(src="../assets/img/login/Vanya.jpg")
-            h1.who Who am I
-            p.about__text
+          section.about__left
+            .headlines.headlines--about
+              h1.headlines__title.headlines__title--about About me
+              +svg("about_header")
+            aside.about
+              .img__profile
+                img(src="../assets/img/login/Vanya.jpg")
+              h2.headlines__title.headlines__title--about Who am I
+              p.about__text.
+                Front-end Developer and graduate of
+                Moscow Energetic University with Science Bachelor Degree. I combines my education with 3 years commercial
+                experience in SEO management and UX front-end development to produce high-quality websites and exceptional
+                user experience.
         .col-6
-          section.skills
-            h2.skills_title My skills
-            p.skills__text
-            section.skills__box
+          section.about__right
+            h2.headlines__title.headlines__title--about Skills and your profit
+            aside.skills
+              p.skills__text.
+                  I am fond of working working on Front-End but I do also able to join the backend teams
+                  solve possible issues.
+              section.skills__box
+                .col-6
+                  h3.skills__title Frontend
+                  ul.skills__list
+                    li.skills__item
+                      .skills__circle
+                        .skills__circle-bg
+                .col-6
+                  h3.skills__title Backend
+                .col-6
+                  h3.skills__title WorkFlow
+
   section.map__section
     .map__section-map#map
-    .contacts
-      h2.contacts__title Contacts
-      .contacts__wrapper
-        ul.contacts__list
-          li.contacts__item
-            p.contacts__content ivan_zacharov
-              +svg("skype")
-          li.contacts__item
-            p.contacts__content radchenk@gmail.com
-              +svg("envelope")
-          li.contacts__item
-            p.contacts__content +7 952 354 32 73
-              +svg("phone")
-          li.contacts__item
-            p.contacts__content St Petersburg
-              +svg("map_marker")
+    include ../common/aboutme/_aboutme-contacts
     include ../common/footer/_footer--general
   script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxRe3o4BgMUHxDenPDRrGo9es-bFDbTmE&callback=initMap")
