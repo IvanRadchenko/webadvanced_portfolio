@@ -1,11 +1,7 @@
-@import "./_header--login";
-@import "./form";
-@import "./footer";
+@import "../partials/header/_header--login";
+@import "../partials/forms/_form__main";
+@import "../partials/footer/_footer--login";
 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 0 100px;
-
+.login__wrapper {
+  background: url("../img/login/1200_forest_login.png") no-repeat;
 }
