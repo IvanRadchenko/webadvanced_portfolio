@@ -2,9 +2,7 @@
 .quotes {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   padding-top: 30px;
-  margin-bottom: 20px;
 
   background: linear-gradient(to bottom, rgba(244,245,240,1) 0%, rgba(244,245,240,1) 70%,
     rgba(244,245,240,0));
@@ -12,6 +10,8 @@
   .quotes__body {
     display: flex;
     flex-flow: column wrap;
+    align-self: flex-start;
+    margin-bottom: 20px;
   }
 }
 
@@ -31,9 +31,11 @@
 
 //Quote
 .quote {
+  align-self: center;
   font-family: "robotoitalic", Arial, sans-serif;
   padding-top: 10px;
   margin-bottom: 20px;
+  width: 450px;
 
   &:after, &:before {
     content: "";
@@ -43,7 +45,7 @@
   &__mark {
     position: absolute;
     top: 70px;
-    left: 10px;
+    left: 70px;
   }
 }
 
