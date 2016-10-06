@@ -4,3 +4,64 @@
   color: $darkgrey;
 }
 
+.skills {
+  &__header {
+    font-size: 28px;
+    margin: 0.85em 0;
+    font-family: "RobotoMedium", sans-serif;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    float: left;
+    margin: 0 27px 0 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__circle {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 70px;
+      border: 20px solid #dfdcd5;
+      border-radius: 50%;
+    }
+    &-progress {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &-svg-path {
+      opacity: 0;
+      fill: none;
+      stroke: #004cd1;
+      stroke-width: 20px;
+      transition: all 4s ease-out;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+    }
+    &-content {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: center;
+      color: #243994;
+      font-family: "RobotoMedium", sans-serif;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}
