@@ -18,10 +18,12 @@
   &__link {
     width: 45px;
     height: 45px;
+    margin-right: 20px;
 
-    :hover {
-      fill: $btn;
-    }
+    &:hover svg {
+        filter: drop-shadow(0px 0px 2px black);
+        fill: $btn;
+      }
 
     &--login {
       fill: $fontgrey;
@@ -34,6 +36,7 @@
 }
 
 .social__link--login {
+
   & .svg__in {
     height: 30px;
     width: 30px;
@@ -66,8 +69,4 @@
     height: 25px;
     width: 25px;
   }
-}
-
-.social__link {
-  margin-right: 20px;
 }
