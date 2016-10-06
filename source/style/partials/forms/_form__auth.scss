@@ -4,6 +4,9 @@
   margin-bottom: 20px;
 
   &-row {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
@@ -34,6 +37,11 @@
     border: none;
 
     color: $fontgrey;
+
+    &:focus {
+      border: 2px $btn solid;
+      outline: none;
+    }
 
     &--nosvg {
       padding-left: 20px;

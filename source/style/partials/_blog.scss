@@ -31,12 +31,12 @@
   &:hover {
     color: $btn;
     cursor: pointer;
-    font-family: "robotobold", Arial, san-serif;
   }
 
   &--active {
     border-right: 3px solid $btn;
     color: $btn;
+    font-family: "robotobold", Arial, san-serif;
   }
 }
 

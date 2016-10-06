@@ -1,6 +1,8 @@
 //General Footer styles
 
 .footer--general {  //Cascade for SVG social color
+  z-index: 2;
+
   .social svg {
     fill: $fontgrey;
   }

@@ -11,8 +11,8 @@ section.auth__section
            include ../forms/_form__auth
            include ../forms/_form__robot
           footer.form__footer
-            a.form__footer-btn.form__footer-btn--link.form__footer-btn--left(href="/portfolio.html") Main page
-            input.form__footer-btn.form__footer-btn--submit.form__footer-btn--right(type="submit" name="submit" value="Login")
+            a.form__footer-btn.form__footer-btn--link(href="/portfolio.html") Main page
+            button.form__footer-btn.form__footer-btn--submit(type="submit" name="submit" value="Login") Login
       .col-4.col--centered
         .forms#welcome
           form.form__body(action="/login" method="post")

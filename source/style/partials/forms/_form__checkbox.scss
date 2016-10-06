@@ -1,14 +1,18 @@
 //Checkbox module for the Form--Login
 
 .form__robot-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  height: 35px;
 }
 
 .svg__check {
   position: absolute;
-  top: 9px;
-  left: 5px;
+  top: 17px;
+  left: 15px;
 
   width: 10px;
   height: 10px;
@@ -18,16 +22,30 @@
 }
 
 .checkbox__input {
+  position: absolute;
+  top: 12px;
+  left: 90px;
   opacity: 0;
   width: 20px;
   height: 20px;
-  position: absolute;
+
 
   &:checked ~ .checkbox__label .svg__check {
     display: inline;
   }
 }
 
+.checkbox__label {
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  width: 180px;
+  padding: 10px;
+}
+
 .checkbox__label:before {
+  position: absolute;
+  top: 12px;
+  left: 10px;
   background-color: $btn;
 }

@@ -3,4 +3,10 @@
    font-family: 'robotoregular', Arial, san-serif;
    resize: none;
    width: 340px;
+   border-radius: 25px;
+
+   &:focus {
+      border: 2px $btn solid;
+      outline: none;
+   }
  }
