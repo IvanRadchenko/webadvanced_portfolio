@@ -1,5 +1,5 @@
 //Common header
-.header__main {
+.header {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -8,16 +8,59 @@
   height: 620px;
   width: 1200px;
   background: url("../img/header/1200_forest_about.png") center center no-repeat;
+
+
+  &:before,&:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+  }
+
+  &:before {
+    left: 0;
+    border-width: 7.8vw 0 0 50vw;
+    border-color: transparent transparent transparent $lightwhite;
+  }
+
+  &:after {
+    right: 0;
+    border-width: 0 0 7.8vw 50vw;
+    border-color: transparent transparent $lightwhite transparent;
+  }
 }
 
-.musthead {
+//Aboutme triangles
+.header--difcolors .header{
+  &:before {
+    border-color: transparent transparent transparent $portfoliolight;
+  }
+  &:after {
+    border-color: transparent transparent $portabouthead transparent;
+  }
+}
+
+//Blog triangles
+.header--blog .header{
+  &:before {
+    border-color: transparent transparent transparent $blogback;
+  }
+  &:after {
+    border-color: transparent transparent $blogback transparent;
+  }
+}
+
+.header__musthead {
   position: relative;
   padding-top: 30px;
   margin-bottom: 65px;
 
   background:  url(../img/header/headershadow.png) no-repeat center;
 
-  &__flex {
+  &--flex {
     display: flex;
     align-items: flex-start;
   }
@@ -46,45 +89,45 @@
 }
 
 
-//Header footer section with several SVGs in a row
-
-.header__triangles {
-  position: relative;
-  height: 120px;
-}
-
-.angle-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-
-  &--right {
-    top: 0;
-    left: 0;
-    border-bottom: 150px solid $lightwhite;
-    border-right: 900px solid transparent;
-  }
-
-  &--left {
-    top: 0;
-    right: 0;
-    border-bottom: 150px solid $lightwhite;
-    border-left: 900px solid transparent;
-  }
-
-  &--rightblog {
-    top: 270px;
-    left: 0;
-    border-bottom: 170px solid $blogback;
-    border-right: 900px solid transparent;
-  }
-
-  &--leftblog{
-    top: 270px;
-    right: 0;
-    border-bottom: 170px solid $blogback;
-    border-left: 900px solid transparent;
-  }
-}
+////Header footer section with several SVGs in a row
+//
+//.header__triangles {
+//  position: relative;
+//  height: 120px;
+//}
+//
+//.angle-arrow {
+//  position: absolute;
+//  width: 0;
+//  height: 0;
+//
+//  &--right {
+//    top: 0;
+//    left: 0;
+//    border-bottom: 150px solid $lightwhite;
+//    border-right: 900px solid transparent;
+//  }
+//
+//  &--left {
+//    top: 0;
+//    right: 0;
+//    border-bottom: 150px solid $lightwhite;
+//    border-left: 900px solid transparent;
+//  }
+//
+//  &--rightblog {
+//    top: 270px;
+//    left: 0;
+//    border-bottom: 170px solid $blogback;
+//    border-right: 900px solid transparent;
+//  }
+//
+//  &--leftblog{
+//    top: 270px;
+//    right: 0;
+//    border-bottom: 170px solid $blogback;
+//    border-left: 900px solid transparent;
+//  }
+//}
 
 

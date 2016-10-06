@@ -119,12 +119,3 @@
     background-color: $portright;
   }
 }
-
-.portfolio__arrow {
-  position: absolute;
-
-  & .svg__portf_arrow_up,.svg__portf_arrow_down  {
-    width: 4.5rem;
-    height: 3.5rem;
-  }
-}

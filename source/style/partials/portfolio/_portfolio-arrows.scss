@@ -1,18 +1,20 @@
 //Arrows
-.arrow__up, .arrow__down, .svg__portf_arrow_down,.svg__portf_arrow_up {
+.svg__portf_arrow_down,.svg__portf_arrow_up {
   z-index: 999;
   cursor: pointer;
 
   &:hover {
     fill: $white;
-    filter: blur(0px) brightness(1.1) contrast(1.1) grayscale(0.1) hue-rotate(0deg) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(0px 0px 5px #000);
+    filter: brightness(1.1) contrast(1.1) grayscale(0.1) invert(0.1) opacity(100%) saturate(5) sepia(0.5) drop-shadow(0px 0px 5px #000);
   }
 }
 
+//Positioning of arrows
 .arrow__up {
   display: flex;
   justify-content: center;
-  height: 120px;
+  height: 100px;
+
   & svg {
     fill: rgba($white,.7);
   }
@@ -20,15 +22,29 @@
 
 .arrow__down  {
   position: absolute;
-  top: 95px;
+  display: flex;
+  top: 50px;
   left: 25px;
+
   & svg {
     fill: rgba($white,.7);
   }
 }
 
+//General styles for top and bottom arrows
 .svg__portf_arrow_down,.svg__portf_arrow_up {
   width: 30px;
   height:30px;
   fill: $white;
+}
+
+
+//Slider Arrows in Portfolio
+.portfolio__arrow {
+  position: absolute;
+
+  & .svg__portf_arrow_up,.svg__portf_arrow_down  {
+    width: 4.5rem;
+    height: 3.5rem;
+  }
 }
