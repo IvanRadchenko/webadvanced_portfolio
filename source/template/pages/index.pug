@@ -1,5 +1,5 @@
 extends ../_template
-
+include ../mixins/_skill
 include ../mixins/_svg
 block content
   .header--difcolors
@@ -29,19 +29,23 @@ block content
                   I am fond of working working on Front-End but I do also able to join the backend teams
                   solve possible issues.
               section.skills__box
-                .col-6
                   h3.skills__title Frontend
                   ul.skills__list
-                    li.skills__item
-                      .skills__circle
-                        .skills__circle-bg
-                          svg.skills__circle-progress
-                            //path(data-percent="77" d="m55,10c24.86188,0 45,20.13812 45,45c0,24.86188 -20.13812,45 -45,45c-24.86188,0 -45,-20.13812 -45,-45c0,-24.86188 20.13812,-45 45,-45z" style="stroke-dasharray: 282.799px; stroke-dashoffset: 65.0437px; opacity: 0.77;)
-                .col-6
+                    +skill("HTML")
+                    +skill("HTML")
+                    +skill("HTML")
+                    +skill("HTML")
                   h3.skills__title Backend
-                .col-6
+                  ul.skills__list
+                    +skill("HTML")
+                    +skill("HTML")
+                    +skill("HTML")
                   h3.skills__title WorkFlow
-
+                  ul.skills__list
+                    +skill("HTML")
+                    +skill("HTML")
+                    +skill("HTML")
+                    +skill("HTML")
   section.map__section
     .map__section-map#map
     include ../common/aboutme/_aboutme-contacts

@@ -1,0 +1,6 @@
+ <svg width="120" height="40" class="svg_circles">
+              <circle cx="10" cy="20" r="5.656854249492381" style="fill:steelblue;"></circle>
+              <circle cx="30" cy="20" r="7.54983443527075" style="fill:steelblue;"></circle>
+              <circle cx="55" cy="20" r="10.583005244258363" style="fill:steelblue;"></circle>
+              <circle cx="90" cy="20" r="17.11724276862369" style="fill:steelblue;"></circle>
+              </svg>
