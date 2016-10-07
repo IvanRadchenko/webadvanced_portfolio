@@ -4,7 +4,7 @@ include ../mixins/_svg
 block content
   .header--difcolors
     include ../common/header/_header--general
-  main.aboutme__body
+  main.about__body
     .container
       .row
         .col-6
@@ -12,9 +12,9 @@ block content
             .headlines.headlines--about
               h1.headlines__title.headlines__title--about About me
               +svg("about_header")
-            aside.about
-              .img__profile
-                img(src="../assets/img/login/Vanya.jpg")
+            .img__profile
+              img(src="../assets/img/login/Vanya.jpg")
+            aside.about__description
               h2.headlines__title.headlines__title--about Who am I
               p.about__text.
                 Front-end Developer and graduate of
