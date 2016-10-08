@@ -1,7 +1,14 @@
 .headline {
-  width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
-  background-color: $lightwhite;
+
+  &--portintro {
+    background-color: $lightwhite;
+  }
+
+  &--aboutme {
+    background-color: $portabouthead;
+  }
 }
 
 .headlines {
@@ -24,7 +31,6 @@
 
 
   &--aboutme {
-    background: $portabouthead;
     padding-top: 55px;
   }
 }
@@ -69,8 +75,6 @@
 
 //Headlines of the Aboutme Page
 .headlines--about {
-  width: 80%;
-
   & .svg__about_header {
     top: -50px;
     height: 150px;

@@ -2,9 +2,10 @@
 
 .portfolio__aboutme {
   position: relative;
-  width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   background: url("../img/1200_forest_works.png") no-repeat bottom;
+  background-size: cover;
 }
 
 .contactme {

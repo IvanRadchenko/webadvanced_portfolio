@@ -1,18 +1,29 @@
 //Quote flexbox
 .quotes {
-  display: flex;
-  flex-flow: row wrap;
   padding-top: 30px;
 
   background: linear-gradient(to bottom, rgba(244,245,240,1) 0%, rgba(244,245,240,1) 70%,
     rgba(244,245,240,0));
 
-  .quotes__body {
+  &__wrapper {
     display: flex;
-    flex-flow: column wrap;
-    align-self: flex-start;
-    margin-bottom: 20px;
+    flex-flow: row wrap;
+    width: 940px;
+    padding: 0 20px;
+
+    @include bp(md) {
+      flex-flow: column;
+      align-items: center;
+    }
   }
+}
+
+.quotes__body {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 20px;
+  width: 450px;
 }
 
 .quotes {
@@ -31,6 +42,7 @@
 
 //Quote
 .quote {
+  position: relative;
   align-self: center;
   font-family: "robotoitalic", Arial, sans-serif;
   padding-top: 10px;
@@ -44,8 +56,8 @@
 
   &__mark {
     position: absolute;
-    top: 70px;
-    left: 70px;
+    top: -20px;
+    left: 0;
   }
 }
 

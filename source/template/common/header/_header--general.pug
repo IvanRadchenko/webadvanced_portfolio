@@ -2,24 +2,15 @@ include ../../mixins/_user
 
 header.header
   section.header__musthead
-    .container
-      .header__musthead--flex
-        include ../social/_social--header
-        +svg("hamburger")
+   .grid-1-spaceBetween
+     .col-2
+      include ../social/_social--header
+     +svg("hamburger")
   section.header__body
-    .container
-      .row
-        .col-12
-          +svg("portfolio_header")
-          .col-4.col--centered
-            +profile("general")
-            .col-1.col--centered
-              .arrow__down
-                +svg("portf_arrow_down")
-  //section.header__triangles
-  //  .container
-  //    .row
-  //      .col-6
-  //        .angle-arrow.angle-arrow--right
-  //      .col-6
-  //        .angle-arrow.angle-arrow--left
+   .grid-1-center
+      +svg("portfolio_header")
+      .col-12
+        +profile("general")
+  .arrow__down
+    .grid-12-center
+      +svg("portf_arrow_down")

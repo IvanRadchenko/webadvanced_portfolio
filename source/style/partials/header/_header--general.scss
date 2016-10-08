@@ -2,13 +2,13 @@
 .header {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   position: relative;
-  margin: 0 auto;
   height: 620px;
-  width: 1200px;
-  background: url("../img/header/1200_forest_about.png") center center no-repeat;
-
+  max-width: 1800px;
+  margin: 0 auto;
+  background: url("../img/water_map/water.jpg") center center no-repeat;
+  background-size: cover;
 
   &:before,&:after {
     position: absolute;
@@ -18,17 +18,18 @@
     height: 0;
     content: "";
     border-style: solid;
+    z-index: 0;
   }
 
   &:before {
     left: 0;
-    border-width: 7.8vw 0 0 50vw;
+    border-width: 8.8vw 0 0 50vw;
     border-color: transparent transparent transparent $lightwhite;
   }
 
   &:after {
     right: 0;
-    border-width: 0 0 7.8vw 50vw;
+    border-width: 0 0 8.8vw 50vw;
     border-color: transparent transparent $lightwhite transparent;
   }
 }
@@ -53,12 +54,11 @@
   }
 }
 
-.header__musthead {
-  position: relative;
-  padding-top: 30px;
-  margin-bottom: 65px;
 
-  background:  url(../img/header/headershadow.png) no-repeat center;
+//Musthead menu
+.header__musthead {
+  padding-top: 30px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0) 100%);
 
   &--flex {
     display: flex;
@@ -67,67 +67,23 @@
 }
 
 .svg__hamburger {
-  margin-left: auto;
-  margin-right: 7px;
   width: 40px;
   height:40px;
+  margin-right: 20px;
   fill: $white;
 }
 
 //Header Body
 
 .header__body {
-  margin-bottom: 80px;
+  position: relative;
+  margin-bottom: auto;
 }
 
 .svg__portfolio_header {
   position: absolute;
-  width: 1140px;
+  width: 100%;
   height: 320px;
 
   fill: $portfolioheader;
 }
-
-
-////Header footer section with several SVGs in a row
-//
-//.header__triangles {
-//  position: relative;
-//  height: 120px;
-//}
-//
-//.angle-arrow {
-//  position: absolute;
-//  width: 0;
-//  height: 0;
-//
-//  &--right {
-//    top: 0;
-//    left: 0;
-//    border-bottom: 150px solid $lightwhite;
-//    border-right: 900px solid transparent;
-//  }
-//
-//  &--left {
-//    top: 0;
-//    right: 0;
-//    border-bottom: 150px solid $lightwhite;
-//    border-left: 900px solid transparent;
-//  }
-//
-//  &--rightblog {
-//    top: 270px;
-//    left: 0;
-//    border-bottom: 170px solid $blogback;
-//    border-right: 900px solid transparent;
-//  }
-//
-//  &--leftblog{
-//    top: 270px;
-//    right: 0;
-//    border-bottom: 170px solid $blogback;
-//    border-left: 900px solid transparent;
-//  }
-//}
-
-

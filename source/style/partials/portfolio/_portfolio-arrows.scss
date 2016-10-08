@@ -21,10 +21,9 @@
 }
 
 .arrow__down  {
-  position: absolute;
-  display: flex;
-  top: 50px;
-  left: 25px;
+  z-index: 999;
+  padding-top: 20px;
+  margin-bottom: auto;
 
   & svg {
     fill: rgba($white,.7);
