@@ -13,7 +13,7 @@
 .arrow__up {
   display: flex;
   justify-content: center;
-  height: 100px;
+  height: 80px;
 
   & svg {
     fill: rgba($white,.7);
@@ -22,7 +22,6 @@
 
 .arrow__down  {
   z-index: 999;
-  padding-top: 20px;
   margin-bottom: auto;
 
   & svg {

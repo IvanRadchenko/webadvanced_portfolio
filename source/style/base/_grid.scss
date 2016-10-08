@@ -680,12 +680,6 @@
     flex-basis: 100%;
     max-width: 100%;
   }
-  [class*="grid"] > [data-push-left*="_sm-0"] {
-    margin-left: 0;
-  }
-  [class*="grid"] > [data-push-left*="_sm-1"] {
-    margin-left: 8.33333333%;
-  }
 }
 
 
@@ -738,4 +732,8 @@
     flex-basis: 100%;
     max-width: 100%;
   }
+}
+
+.col-extraleft {
+  margin-left: 10px;
 }

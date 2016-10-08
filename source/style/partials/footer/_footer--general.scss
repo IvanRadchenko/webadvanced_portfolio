@@ -13,7 +13,8 @@
 }
 
 .footer__body {
-  padding: 30px 15px 0 10px;
+  position: relative;
+  padding: 20px 15px 20px 10px;
   margin: 0;
   background-color: $footertop;
   font-family: "robotolight", Arial, san-serif;
@@ -21,24 +22,7 @@
 }
 
 .footer__middle {
-
-  //&:after {
-  //  content: "";
-  //  position: absolute;
-  //  top: 10px;
-  //  left: 0;
-  //  height: 85px;
-  //  width: 1px;
-  //  border-right: 1px solid $fontgrey;
-  //}
-  //&:before {
-  //  content: "";
-  //  position: absolute;
-  //  top: 10px;
-  //  right: 0;
-  //  height: 85px;
-  //  width: 1px;
-  //  border-left: 1px solid $fontgrey ;  }
+  position: relative;
 
   & .social {
     justify-content: flex-start;
@@ -55,7 +39,7 @@
   justify-content: space-between;
   margin: 0 0 20px 0;
   padding: 0;
-  width: 450px;
+  width: 400px;
 }
 
 .footer__item {
@@ -73,11 +57,42 @@
     text-decoration: underline;
   }
 }
+
+.footer__extra {
+  width: 400px;
+  padding-left: 10px;
+}
+
+.footer__nav {
+  padding-left: 25px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    height: 85px;
+    width: 1px;
+    border-right: 1px solid $fontgrey;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    height: 85px;
+    width: 1px;
+    border-left: 1px solid $fontgrey ;  }
+}
+
 .footer__quote {
+  padding-left: 25px;
+  width: 500px;
   color: rgba($white, .5);
 }
 
 .footer__quote-text {
+  margin-bottom: 0;
   font-family: "robotoitalic", Arial, san-serif;
 }
 

@@ -23,13 +23,13 @@
 
   &:before {
     left: 0;
-    border-width: 8.8vw 0 0 50vw;
+    border-width: 9vw 0 0 53vw;
     border-color: transparent transparent transparent $lightwhite;
   }
 
   &:after {
     right: 0;
-    border-width: 0 0 8.8vw 50vw;
+    border-width: 0 0 9vw 53vw;
     border-color: transparent transparent $lightwhite transparent;
   }
 }
@@ -57,7 +57,7 @@
 
 //Musthead menu
 .header__musthead {
-  padding-top: 30px;
+  padding-top: 25px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0) 100%);
 
   &--flex {

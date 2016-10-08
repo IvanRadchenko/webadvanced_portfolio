@@ -9,7 +9,6 @@
     display: flex;
     flex-flow: row wrap;
     width: 940px;
-    padding: 0 20px;
 
     @include bp(md) {
       flex-flow: column;
@@ -47,7 +46,7 @@
   font-family: "robotoitalic", Arial, sans-serif;
   padding-top: 10px;
   margin-bottom: 20px;
-  width: 450px;
+  width: 400px;
 
   &:after, &:before {
     content: "";
