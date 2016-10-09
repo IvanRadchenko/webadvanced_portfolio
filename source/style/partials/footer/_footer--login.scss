@@ -18,4 +18,9 @@
   text-align: center;
   line-height: 6.285625;
   color: $white;
+  width: 80%;
+
+  @include bp(sm) {
+    line-height: 2;
+  }
 }

@@ -1,14 +1,26 @@
 .header-login {
   position: relative;
-  padding: 20px;
+  flex: 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0) 100%);
+
+  @include bp(sm) {
+    justify-content: center;
+  }
+}
+
+.header__login-wrapper {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .header__btn.header--login {
-  float: right;
-
   width: 175px;
   height: 45px;
-  margin-right: 22px;
+  margin-right: 90px;
 
   display: inline-block;
   text-decoration: none;
@@ -24,8 +36,9 @@
     border-color: $btnheader;
     background-color: $btn;
   }
+
+  @include bp(sm) {
+    margin: 0;
+  }
 }
 
-.login__background {
-  background: url("../assets/img/login/1200_forest_login.png");
-}

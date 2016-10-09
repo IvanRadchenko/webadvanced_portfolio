@@ -10,7 +10,7 @@
     flex-flow: row wrap;
     justify-content: center;
 
-    @include bp(810px) {
+    @include bp(xs) {
       flex-flow: column;
       align-items: center;
     }
@@ -24,7 +24,7 @@
   margin: 0 0 20px 10px;
   width: 35%;
 
-  @include bp(810px) {
+  @include bp(xs) {
     width: 75%;
   }
 }

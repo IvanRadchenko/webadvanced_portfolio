@@ -1,6 +1,8 @@
 extends ../_template--login
 block content
-  .login__wrapper
+  .grid-center-noGutter.login__wrapper
     include ../common/header/_header--login
-    include ../common/forms/_form
-    include ../common/footer/_footer--login
+    .col-12
+      include ../common/forms/_form
+    .col-12
+      include ../common/footer/_footer--login

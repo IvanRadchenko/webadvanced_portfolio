@@ -64,7 +64,7 @@
   width: 80%;
   padding-left: 10px;
 
-  @include bp(sm) {
+  @include bp(xs) {
     text-align: center;
     padding: 0;
     width: auto;
@@ -74,7 +74,7 @@
 .footer__nav {
   padding-left: 20px;
 
-  @include bp(sm) {
+  @include bp(xs) {
     text-align: center;
     padding-top: 15px;
     padding-left: 0;
@@ -91,7 +91,7 @@
     width: 1px;
     border-right: 1px solid $fontgrey;
 
-    @include bp(sm) {
+    @include bp(xs) {
      display: none;
     }
   }
@@ -109,7 +109,7 @@
       display: none;
     }
 
-    @include bp(md) {
+    @include bp(xs) {
       display: none;
     }
 
@@ -121,12 +121,12 @@
   width: 100%;
   color: rgba($white, .5);
 
-  @include bp(md) {
+  @include bp(sm) {
     padding-top: 20px;
   }
 
 
-  @include bp(sm) {
+  @include bp(xs) {
     padding-left: 0;
     text-align: center;
   }
