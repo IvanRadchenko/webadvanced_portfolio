@@ -5,47 +5,10 @@ block content
   .header--difcolors
     include ../common/header/_header--general
   main.about__body
-    .container
-      .row
-        .col-6
-          section.about__left
-            .headlines.headlines--about
-              h1.headlines__title.headlines__title--about About me
-              +svg("about_header")
-            .img__profile
-              img(src="../assets/img/login/Vanya.jpg")
-            aside.about__description
-              h2.headlines__title.headlines__title--about Who am I
-              p.about__text.
-                Front-end Developer and graduate of
-                Moscow Energetic University with Science Bachelor Degree. I combines my education with 3 years commercial
-                experience in SEO management and UX front-end development to produce high-quality websites and exceptional
-                user experience.
-        .col-6
-          section.about__right
-            h2.headlines__title.headlines__title--about Skills and your profit
-            aside.skills
-              p.skills__text.
-                  I am fond of working working on Front-End but I do also able to join the backend teams
-                  solve possible issues.
-              section.skills__box
-                  h3.skills__title Frontend
-                  ul.skills__list
-                    +skill("HTML")
-                    +skill("HTML")
-                    +skill("HTML")
-                    +skill("HTML")
-                  h3.skills__title Backend
-                  ul.skills__list
-                    +skill("HTML")
-                    +skill("HTML")
-                    +skill("HTML")
-                  h3.skills__title WorkFlow
-                  ul.skills__list
-                    +skill("HTML")
-                    +skill("HTML")
-                    +skill("HTML")
-                    +skill("HTML")
+    .about_wrapper
+      .grid
+        include ../common/aboutme/_aboutme-profile
+        include ../common/aboutme/_aboutme-skills
   section.map__section
     .map__section-map#map
     include ../common/aboutme/_aboutme-contacts

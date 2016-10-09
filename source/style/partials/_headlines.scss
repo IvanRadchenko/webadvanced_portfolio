@@ -28,7 +28,7 @@
     line-height: 1;
     margin: 0;
 
-    @include bp(560px) {
+    @include bp(56rem) {
       font-size: 5.8rem;
     }
   }
@@ -90,6 +90,7 @@
   & .svg__about_header {
     top: -50px;
     height: 150px;
+    width: 350px;
   }
 }
 

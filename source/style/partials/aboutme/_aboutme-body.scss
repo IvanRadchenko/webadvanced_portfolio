@@ -1,56 +1,40 @@
 @import "map";
 @import "aboutme-contacts";
+@import "aboutme-profile";
 
-.about {
+.about_wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
 
-  &__body {
-    width: 1200px;
-    margin: 0 auto;
-    background-color: $portfoliolight;
-  }
-
-  &__left {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    margin-right: -20px;
-    margin-left: -20px;
-    background-color: $portfoliolight;
-  }
-
-  &__right {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    margin-right: -20px;
-    margin-left: -20px;
+.about__right {
     padding-left: 30px;
+}
+
+.about__body {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $portfoliolight;
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
     background-color: $portabouthead;
-  }
-
-  &__description {
-    align-self: flex-start;
-    width: 445px;
-    padding-bottom: 20px;
-    color: $darkgrey;
-  }
-
-
-}
-
-//Img pic - need good quality
-.img__profile {
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
-  height: 270px;
-  width: 270px;
-  margin-bottom: 20px;
-  overflow: hidden;
-
-  & img {
-    width: 100%;
+    z-index: -1;
   }
 }
-
-

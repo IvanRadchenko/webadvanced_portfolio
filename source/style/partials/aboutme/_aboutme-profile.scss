@@ -1,0 +1,27 @@
+//User profile
+.about_profile {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img__profile {
+  height: 270px;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+  }
+}
+
+
+.about__description {
+  width: 78%;
+  padding-bottom: 20px;
+  color: $darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+}
