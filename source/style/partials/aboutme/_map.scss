@@ -4,9 +4,9 @@
   flex-flow: wrap column;
   position: relative;
   overflow: hidden;
-  width: 1200px;
   height: 980px;
   margin: 0 auto;
+  z-index: -1;
 
   & .footer--general {
     margin-top: auto;
