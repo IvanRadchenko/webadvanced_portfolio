@@ -109,6 +109,10 @@
       display: none;
     }
 
+    @include bp(md) {
+      display: none;
+    }
+
   }
 }
 
@@ -116,6 +120,11 @@
   padding-left: 25px;
   width: 100%;
   color: rgba($white, .5);
+
+  @include bp(md) {
+    padding-top: 20px;
+  }
+
 
   @include bp(sm) {
     padding-left: 0;
