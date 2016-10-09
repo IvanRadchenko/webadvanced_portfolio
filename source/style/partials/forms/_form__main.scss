@@ -15,7 +15,9 @@
   text-align: center;
   color: $white;
 
-  @extend %clearfix;
+  @include bp(sm) {
+    width: 330px;
+  }
 }
 
 .form__body {

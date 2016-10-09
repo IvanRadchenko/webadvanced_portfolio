@@ -1,22 +1,30 @@
 //@include bp(..) {...}
 @mixin bp($point) {
-  
+
   $phone: "(max-width: 320px)";
   $small: "(max-width: 768px)";
   $medium: "(max-width: 1200px)";
   $large: "(max-width: 1800px)";
 
   @if $point == lg {
-    @media #{$large} { @content; }
+    @media #{$large} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$medium} {
+      @content;
+    }
+  } @else if $point == sm {
+    @media #{$small}  {
+      @content;
+    }
+  } @else if $point == xs {
+    @media #{$phone}  {
+      @content;
+    }
+  } @else {
+    @media ("max-width: #{$point}") {
+      @content
+    }
   }
-  @else if $point == md {
-    @media #{$medium} { @content; }
-  }
-  @else if $point == sm {
-    @media #{$small}  { @content; }
-  }
-  @else if $point == xs {
-    @media #{$phone}  { @content; }
-  }
-
 }

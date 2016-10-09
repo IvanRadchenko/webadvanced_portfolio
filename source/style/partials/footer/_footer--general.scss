@@ -34,17 +34,15 @@
 }
 
 .footer__list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   margin: 0 0 20px 0;
   padding: 0;
-  width: 400px;
+  width: 100%;
 }
 
 .footer__item {
   list-style: none;
   display: inline-block;
+  margin-right: 5%;
 }
 
 .footer__link {
@@ -59,12 +57,12 @@
 }
 
 .footer__extra {
-  width: 400px;
+  width: 80%;
   padding-left: 10px;
 }
 
 .footer__nav {
-  padding-left: 25px;
+  padding-left: 20px;
 
   &:after {
     content: "";
@@ -87,7 +85,7 @@
 
 .footer__quote {
   padding-left: 25px;
-  width: 500px;
+  width: 100%;
   color: rgba($white, .5);
 }
 

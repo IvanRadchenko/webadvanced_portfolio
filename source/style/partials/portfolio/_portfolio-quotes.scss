@@ -8,9 +8,9 @@
   &__wrapper {
     display: flex;
     flex-flow: row wrap;
-    width: 940px;
+    justify-content: center;
 
-    @include bp(md) {
+    @include bp(810px) {
       flex-flow: column;
       align-items: center;
     }
@@ -21,8 +21,12 @@
   position: relative;
   display: flex;
   flex-flow: column wrap;
-  margin-bottom: 20px;
-  width: 450px;
+  margin: 0 0 20px 10px;
+  width: 35%;
+
+  @include bp(810px) {
+    width: 65%;
+  }
 }
 
 .quotes {
@@ -46,7 +50,7 @@
   font-family: "robotoitalic", Arial, sans-serif;
   padding-top: 10px;
   margin-bottom: 20px;
-  width: 400px;
+  width: 100%;
 
   &:after, &:before {
     content: "";

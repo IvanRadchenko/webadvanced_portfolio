@@ -64,13 +64,21 @@
 
   &__works_header {
     height: 160px;
-    width: 100%;
+    width: 500px;
+
+    @include bp(sm) {
+      width: 330px;
+    }
   }
 
   &__about_header {
     top: 20px;
     height: 180px;
     width: 100%;
+
+    @include bp(sm) {
+      width: 330px;
+    }
   }
 }
 

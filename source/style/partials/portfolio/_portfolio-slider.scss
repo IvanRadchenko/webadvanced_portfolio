@@ -4,6 +4,10 @@
   height: 750px;
   max-width: 1800px;
   margin: 0 auto;
+
+  @include bp(md) {
+    height: auto;
+  }
 }
 
 .portfolio__names {
@@ -13,9 +17,14 @@
   justify-content: center;
   padding: 10px;
   height: 750px;
-
   text-align: center;;
   background-color: $portfoliolight;
+
+  @include bp(md) {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &-title {
     color: $darkgrey;
@@ -70,7 +79,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 750px;
   padding-top: 50px;
   background-color: $greenworks;
 }
@@ -81,24 +89,34 @@
   justify-content: center;
   align-items: center;
 
+  @include bp(md) {
+    height: 520px;
+  }
+
+  @include bp(xs) {
+    height: 260px;
+  }
+
 
   & img {
     width: 70%;
-    height: 100%;
 
     @include bp(md) {
-      //width: 450px;
-      //height: 320px;
+      width: 80%;
+    }
+
+    @include bp(sm) {
+      width: 100%;
     }
   }
 }
 
 .portfolio__list {
-  height: 225px;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: auto;
+  height: 220px;
+  //margin-top: auto;
 }
 
 .portfolio__item {
@@ -112,21 +130,21 @@
     width: 75%;
   }
 
-  &--left:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: 30%;
-    background-color: $portleft;
-  }
-
-  &--right:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: 30%;
-    background-color: $portleft;
-  }
+  //&--left:before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  width: 50%;
+  //  height: 30%;
+  //  background-color: $portleft;
+  //}
+  //
+  //&--right:before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  width: 50%;
+  //  height: 30%;
+  //  background-color: $portleft;
+  //}
 }
