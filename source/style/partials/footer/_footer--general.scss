@@ -1,11 +1,11 @@
 //General Footer styles
 .footer__wrapper {
   background-color: $footertop;
+  z-index: 999;
 }
 
 
 .footer--general {  //Cascade for SVG social color
-  z-index: 2;
   max-width: 1800px;
   margin: 0 auto;
 
@@ -69,7 +69,7 @@
   width: 80%;
   padding-left: 10px;
 
-  @include bp(56.9rem) {
+  @include bp(xs) {
     text-align: center;
     padding: 0;
     width: auto;
@@ -79,7 +79,7 @@
 .footer__nav {
   padding-left: 20px;
 
-  @include bp(56.9rem) {
+  @include bp(xs) {
     text-align: center;
     padding-top: 15px;
     padding-left: 0;
@@ -96,7 +96,7 @@
     width: 1px;
     border-right: 1px solid $fontgrey;
 
-    @include bp(56.9rem) {
+    @include bp(xs) {
      display: none;
     }
   }
@@ -110,7 +110,7 @@
     width: 1px;
     border-left: 1px solid $fontgrey ;
 
-    @include bp(1024px) {
+    @include bp(sm) {
       display: none;
     }
 
@@ -127,7 +127,7 @@
   }
 
 
-  @include bp(56.9rem) {
+  @include bp(xs) {
     padding-left: 0;
     text-align: center;
   }
@@ -149,6 +149,7 @@
   text-align: center;
   padding: 5px;
   color: $white;
+  z-index: 999;
 
   & p {
     margin: 0;
