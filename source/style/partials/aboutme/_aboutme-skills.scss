@@ -3,13 +3,20 @@
 .skills {
   color: $darkgrey;
   width: 100%;
+  @include bp(47.8rem) {
+    text-align: center;
+  }
 }
+
 .skills__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: inline-flex;
   flex-flow: row wrap;
+  @include bp(47.8rem) {
+    justify-content: center;
+  }
 }
 
 .skills__item {

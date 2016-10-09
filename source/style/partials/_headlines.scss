@@ -31,6 +31,10 @@
     @include bp(56rem) {
       font-size: 5.8rem;
     }
+
+    @include bp(47.8rem) {
+      margin-top: 20px;
+    }
   }
 
 
