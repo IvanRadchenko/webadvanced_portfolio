@@ -1,10 +1,10 @@
 //@include bp(..) {...}
 @mixin bp($point) {
 
-  $phone: "(max-width: 321px)";
-  $small: "(max-width: 769px)";
-  $medium: "(max-width: 1201px)";
-  $large: "(max-width: 1800px)";
+  $phone: "(max-width: 32.1rem)";
+  $small: "(max-width: 76.9rem)";
+  $medium: "(max-width: 120.1rem)";
+  $large: "(max-width: 180rem)";
 
   @if $point == lg {
     @media #{$large} {

@@ -110,29 +110,7 @@
 [class*="col-"][class*="-last"] {
   order: 1;
 }
-/************************
-    HIDING COLS
-*************************/
-@media screen and (max-width: 80em) {
-  [class*="col-"][class*="_lg-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 64em) {
-  [class*="col-"][class*="_md-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 48em) {
-  [class*="col-"][class*="_sm-0"] {
-    display: none;
-  }
-}
-@media screen and (max-width: 35.5em) {
-  [class*="col-"][class*="_xs-0"] {
-    display: none;
-  }
-}
+
 /************************
     GRID BY NUMBER
 *************************/
@@ -198,7 +176,7 @@
 }
 
 //MEDIAS
-@media screen and (max-width: 80em) {
+@media screen and (max-width: 180rem) {
   [class*="_lg-1"] > .col,
   [class*="_lg-1"] > [class*="col-"] {
     flex-basis: 100%;
@@ -262,7 +240,7 @@
 }
 
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 120.1rem) {
   [class*="_md-1"] > .col,
   [class*="_md-1"] > [class*="col-"] {
     flex-basis: 100%;
@@ -324,7 +302,7 @@
     max-width: 8.33333333%;
   }
 }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 76.9rem) {
   [class*="_sm-1"] > .col,
   [class*="_sm-1"] > [class*="col-"] {
     flex-basis: 100%;
@@ -386,7 +364,7 @@
     max-width: 8.33333333%;
   }
 }
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 32.1rem) {
   [class*="_xs-1"] > .col,
   [class*="_xs-1"] > [class*="col-"] {
     flex-basis: 100%;
@@ -501,7 +479,7 @@
   max-width: 100%;
 }
 
-@media screen and (max-width: 80em) {
+@media screen and (max-width: 180rem) {
   [class*='grid'] > [class*="_lg-1"] {
     flex-basis: 8.33333333%;
     max-width: 8.33333333%;
@@ -552,7 +530,7 @@
   }
 }
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 120.1rem) {
   [class*='grid'] > [class*="_md-1"] {
     flex-basis: 8.33333333%;
     max-width: 8.33333333%;
@@ -603,7 +581,7 @@
   }
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 76.9rem) {
   [class*='grid'] > [class*="_sm-1"] {
     flex-basis: 8.33333333%;
     max-width: 8.33333333%;
@@ -655,7 +633,7 @@
 }
 
 
-@media screen and (max-width: 35.5em) {
+@media screen and (max-width: 32.1rem) {
   [class*='grid'] > [class*="_xs-1"] {
     flex-basis: 8.33333333%;
     max-width: 8.33333333%;
