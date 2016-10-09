@@ -1,17 +1,18 @@
-.grid-center-noGutter
-  aside.contactme
-    .col-5
-      .auth__section
-        .forms
-          form.form__body.form__body--blured(action="/login" method="post")
-            .form__auth-row.form__auth-row--title
-              h2 Contact me
-            .form__auth-row
-              +inputnosvg("text", "name", "Name", "name")
-            .form__auth-row
-              +inputnosvg("email", "email", "Email", "email")
-            .form__auth-row
-              textarea.form__textarea(placeholder="Your message" cols="35" rows="5" id="message" name="message")
-          footer.form__footer
-            button.form__footer-btn.form__footer-btn--submit.form__footer-btn--left(type="submit" name="submit" value="Submit") Submit
-            button.form__footer-btn.form__footer-btn--submit.form__footer-btn--right Reset
+.contactme__wrapper
+  .grid-center-noGutter
+    aside.contactme
+      .col-5
+        .auth__section
+          .forms
+            form.form__body.form__body--blured(action="/login" method="post")
+              .form__auth-row.form__auth-row--title
+                h2 Contact me
+              .form__auth-row
+                +inputnosvg("text", "name", "Name", "name")
+              .form__auth-row
+                +inputnosvg("email", "email", "Email", "email")
+              .form__auth-row
+                textarea.form__textarea(placeholder="Your message" cols="35" rows="5" id="message" name="message")
+            footer.form__footer
+              button.form__footer-btn.form__footer-btn--submit.form__footer-btn--left(type="submit" name="submit" value="Submit") Submit
+              button.form__footer-btn.form__footer-btn--submit.form__footer-btn--right Reset

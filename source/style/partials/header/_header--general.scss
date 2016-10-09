@@ -3,11 +3,12 @@
 .header {
   background: url("../img/water_map/water.jpg") center center no-repeat;
   background-size: cover;
-  height: 620px;
+  position: relative;
+
 
   &:before,&:after {
     position: absolute;
-    bottom: 430px;
+    bottom: 0;
     display: block;
     width: 0;
     height: 0;
@@ -46,6 +47,7 @@
   flex-flow: column wrap;
   position: relative;
   max-width: 1800px;
+  height: 620px;
   margin: 0 auto;
 }
 

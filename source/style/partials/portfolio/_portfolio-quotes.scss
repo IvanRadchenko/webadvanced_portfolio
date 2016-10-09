@@ -1,14 +1,21 @@
 //Quote flexbox
-.quotes {
-  padding-top: 30px;
-
+.quotes__wrapper {
+  display: flex;
+  justify-content: center;
   background: linear-gradient(to bottom, rgba(244,245,240,1) 0%, rgba(244,245,240,1) 70%,
     rgba(244,245,240,0));
+}
 
-  &__wrapper {
+
+.quotes {
+  padding-top: 30px;
+  max-width: 1800px;
+
+  &__main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    max-width: 1800px;
 
     @include bp(520px) {
       flex-flow: column;
