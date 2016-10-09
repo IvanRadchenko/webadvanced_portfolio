@@ -64,7 +64,7 @@
   width: 80%;
   padding-left: 10px;
 
-  @include bp(xs) {
+  @include bp(569px) {
     text-align: center;
     padding: 0;
     width: auto;
@@ -74,7 +74,7 @@
 .footer__nav {
   padding-left: 20px;
 
-  @include bp(xs) {
+  @include bp(569px) {
     text-align: center;
     padding-top: 15px;
     padding-left: 0;
@@ -91,7 +91,7 @@
     width: 1px;
     border-right: 1px solid $fontgrey;
 
-    @include bp(xs) {
+    @include bp(569px) {
      display: none;
     }
   }
@@ -105,11 +105,7 @@
     width: 1px;
     border-left: 1px solid $fontgrey ;
 
-    @include bp(sm) {
-      display: none;
-    }
-
-    @include bp(xs) {
+    @include bp(1024px) {
       display: none;
     }
 
@@ -126,7 +122,7 @@
   }
 
 
-  @include bp(xs) {
+  @include bp(569px) {
     padding-left: 0;
     text-align: center;
   }

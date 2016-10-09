@@ -28,6 +28,10 @@
   &__title--aboutme {
     line-height: 1;
     margin: 0;
+
+    @include bp(560px) {
+      font-size: 5.8rem;
+    }
   }
 
 

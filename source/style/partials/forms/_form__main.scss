@@ -15,7 +15,7 @@
   text-align: center;
   color: $white;
 
-  @include bp(xs) {
+  @include bp(405px) {
     width: 300px;
   }
 }
