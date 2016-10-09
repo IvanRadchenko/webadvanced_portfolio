@@ -19,6 +19,10 @@
   background-color: $footertop;
   font-family: "robotolight", Arial, san-serif;
   color: $fontgrey;
+
+  @include bp(sm) {
+    padding-bottom: 0;
+  }
 }
 
 .footer__middle {
@@ -59,10 +63,24 @@
 .footer__extra {
   width: 80%;
   padding-left: 10px;
+
+  @include bp(sm) {
+    text-align: center;
+    padding: 0;
+    width: auto;
+  }
 }
 
 .footer__nav {
   padding-left: 20px;
+
+  @include bp(sm) {
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 0;
+    border-bottom: 1px solid $fontgrey;
+    border-top: 1px solid $fontgrey;
+  }
 
   &:after {
     content: "";
@@ -72,7 +90,12 @@
     height: 85px;
     width: 1px;
     border-right: 1px solid $fontgrey;
+
+    @include bp(sm) {
+     display: none;
+    }
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -80,13 +103,24 @@
     right: -15px;
     height: 85px;
     width: 1px;
-    border-left: 1px solid $fontgrey ;  }
+    border-left: 1px solid $fontgrey ;
+
+    @include bp(sm) {
+      display: none;
+    }
+
+  }
 }
 
 .footer__quote {
   padding-left: 25px;
   width: 100%;
   color: rgba($white, .5);
+
+  @include bp(sm) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .footer__quote-text {
