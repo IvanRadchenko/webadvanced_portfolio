@@ -1,17 +1,15 @@
 include ../../mixins/_user
 
 header.header
-  section.header__musthead.musthead--blog
-    .container
-      .header__musthead--flex
-        include ../social/_social--header
+  .header__shadow
+  .header__wrapper.header__wrapper--blog
+    section.header__musthead.header__musthead--blog
+      .grid-1-spaceBetween
+        .col-2_md-5_sm-5_xs-7.col-extraleft
+          include ../social/_social--header
         +svg("hamburger")
-  section.header__blog
-    .container
-      .row
-        .col-12
-          +svg("blog_header")
-          .col-4.col--centered
-            +profile("blog")
-          .angle-arrow.angle-arrow--rightblog
-          .angle-arrow.angle-arrow--leftblog
+    section.header__blog
+      .grid-1-center
+        +svg("blog_header")
+        .col-6
+          +profile("blog")

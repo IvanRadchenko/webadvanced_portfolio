@@ -47,8 +47,14 @@
   flex-flow: column wrap;
   position: relative;
   max-width: 1800px;
-  height: 620px;
   margin: 0 auto;
+
+  &--general {
+    height: 620px;
+  }
+
+  &--blog {
+  }
 }
 
 //Aboutme triangles
@@ -80,11 +86,6 @@
   //Musthead menu
   .header__musthead {
     padding-top: 25px;
-
-    &--flex {
-      display: flex;
-      align-items: flex-start;
-    }
   }
 
   .svg__hamburger {

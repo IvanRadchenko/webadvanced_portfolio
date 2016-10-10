@@ -1,14 +1,15 @@
 //Blog main section
 
 .blog__body {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 1200px;
-  margin: 0 auto;
   padding-top: 35px;
   background-color: $blogback;
 }
+
+.blog__wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 
 .blog__list {
   padding: 0;
