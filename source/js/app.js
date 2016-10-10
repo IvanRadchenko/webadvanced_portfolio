@@ -1,32 +1,43 @@
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
+//preloader
 
-function initMap() {
-  // Basic options for a simple Google Map
-  // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-  var mapOptions = {
-    // How zoomed in you want the map to start at (always required)
-    zoom: 16,
 
-    // The latitude and longitude to center the map (always required)
-    center: new google.maps.LatLng(59.9313014, 30.4071488), // New York
+$(function () {
 
-    // How you would like to style the map.
-    // This is where you would paste any style found on Snazzy Maps.
-    styles: [{"featureType":"all","elementType":"all","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"all","elementType":"geometry","stylers":[{"saturation":"100"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"hue":"#ff0000"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"labels.text.fill","stylers":[{"hue":"#ff0000"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.natural.terrain","elementType":"labels.text.stroke","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#86a77a"},{"visibility":"on"}]}]
-  };
+  var img = [];
 
-  // Get the HTML DOM element that will contain your map
-  // We are using a div with id="map" seen below in the <body>
-  var mapElement = document.getElementById('map');
+  $.each($('*'), function () {
+    var
+      $this = $(this),
+      background = $this.css('background-image'),
+      img = $this.is('img');
 
-  // Create the Google Map using our element and options defined above
-  var map = new google.maps.Map(mapElement, mapOptions);
+    if (background != 'none') {
+      var path = background.replace('url("', '').replace('")', '');
+      img.push(path);
+    }
 
-  // Let's also add a marker while we're at it
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(40.6700, -73.9400),
-    map: map,
-    title: 'Snazzy!'
+
+    if (img) {
+      var path = $this.attr('src');
+
+      if (path) {
+        img.push(path);
+      }
+    }
   });
-}
+
+  for (var i = 0; i < imgs.length; i++) {
+    var image = $('<img>', {
+      attr: {
+        src: img[i]
+      }
+    });
+
+    image.on('load', function () {
+      console.log('image is loaded');
+    })
+
+  }
+
+});
+

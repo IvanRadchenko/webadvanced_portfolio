@@ -28,6 +28,11 @@
   border-radius: 50%;
   position: relative;
   margin: 0 2rem 2rem;
+
+  @include bp(xs) {
+    width: 11rem;
+    height: 11rem;
+  }
 }
 
 
