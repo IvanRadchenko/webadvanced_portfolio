@@ -1,4 +1,4 @@
-//User pic and short description
+/*User main profile module with Photo and Name*/
 .profile {
   position: relative;
   margin-bottom: 20px;
@@ -37,7 +37,7 @@
     margin: 0;
   }
 }
-.fonrms {
+.forms {
   &.profile__name {
     font-size: 2.6rem
   }

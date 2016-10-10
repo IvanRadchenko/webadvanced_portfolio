@@ -1,3 +1,5 @@
+//Headlines All
+
 .headline {
   margin: 0 auto;
 
@@ -18,33 +20,29 @@
   text-align: center;
   text-transform: uppercase;
 
-  &__title--portintro {
+  &--aboutme {
+    padding-top: 55px;
+  }
+
+}
+
+.headlines__title {
+  color: $headlines;
+
+  &--portintro {
     padding-top: 30px;
     margin-bottom: 35px;
     width: 310px;
   }
 
-  &__title--aboutme {
+  &--aboutme {
     line-height: 1;
     margin: 0;
-
-    //@include bp(56rem) {
-    //  font-size: 5.8rem;
-    //}
 
     @include bp(47.8rem) {
       margin-top: 20px;
     }
   }
-
-
-  &--aboutme {
-    padding-top: 55px;
-  }
-}
-
-.headlines__title {
-  color: $headlines;
 
   &:after {
     content:"";
@@ -85,7 +83,10 @@
   }
 }
 
-//Headlines of the Aboutme Page
+
+
+
+/*Headlines of the Aboutme Page*/
 .headlines--about {
   @include bp(47.8rem) {
     padding-top: 20px;
@@ -104,6 +105,8 @@
   }
 }
 
+
+/*Headlines titles of AboutMe page*/
 .headlines__title--about,
 .headlines__title--profile,
 .headlines__title--skills {
