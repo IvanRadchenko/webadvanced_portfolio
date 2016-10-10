@@ -8,9 +8,14 @@
   }
 }
 
+.skills__box {
+  padding-top: 50px;
+}
+
+
 .skills__list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 34px 0;
   padding: 0;
   display: inline-flex;
   flex-flow: row wrap;
@@ -68,4 +73,16 @@
   text-align: center;
   font-size: 1.4rem;
   color: #4e8839;
+}
+
+.skills__text {
+  @include bp(47.8rem) {
+    width: 80%;
+    margin: auto;
+  }
+
+  @include bp(xs) {
+  width: 100%;
+  margin: 0;
+  }
 }

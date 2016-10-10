@@ -28,9 +28,9 @@
     line-height: 1;
     margin: 0;
 
-    @include bp(56rem) {
-      font-size: 5.8rem;
-    }
+    //@include bp(56rem) {
+    //  font-size: 5.8rem;
+    //}
 
     @include bp(47.8rem) {
       margin-top: 20px;
@@ -82,23 +82,31 @@
     top: 20px;
     height: 180px;
     width: 100%;
-
-    @include bp(sm) {
-      width: 330px;
-    }
   }
 }
 
 //Headlines of the Aboutme Page
 .headlines--about {
+  @include bp(47.8rem) {
+    padding-top: 20px;
+  }
+
+
   & .svg__about_header {
     top: -50px;
-    height: 150px;
     width: 350px;
   }
 }
 
-.headlines__title--about {
+.svg__about_header--aboutprofile {
+@include bp(47.8rem) {
+  width: 290px;
+  }
+}
+
+.headlines__title--about,
+.headlines__title--profile,
+.headlines__title--skills {
   text-align: center;
   color: $darkgrey;
 
@@ -106,5 +114,5 @@
     padding-top: 10px;
     border-color: $darkgrey;
   }
-}
 
+}

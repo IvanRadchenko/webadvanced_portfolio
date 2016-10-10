@@ -9,6 +9,11 @@ body {
 	position: relative;
   margin: 0 auto;
   font: 1.6rem/1.5 'robotoregular', Arial, san-serif;
+
+
+  @include bp(47.8rem) {
+    font-size: 1.4rem;
+  }
 }
 
 html, body {
@@ -21,16 +26,31 @@ html, body {
 
 h1 {
   font: 6.3rem 'sansus_webissimoregular', Arial, san-serif;
+
+  @include bp(47.8rem) {
+    font-size: 4.9rem;
+    line-height: 5.2rem;
+  }
 }
 
 h2 {
   font: 3.5rem 'robotomedium', Arial, san-serif;
+
+  @include bp(47.8rem) {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
 }
 
 h3 {
   font: 2.8rem 'robotomedium', Arial, sans-serif;
   color: $darkgrey;
+
+  @include bp(47.8rem) {
+    font-size: 2rem;
+  }
 }
+
 p, h1, h2 , h3 {
   margin-top: 0;
 }
