@@ -52,54 +52,59 @@
 }
 
 //Aboutme triangles
-.header--difcolors .header{
+.header--difcolors .header {
   &:before {
+    border-width: 9vw 2vw 0 50vw;
     border-color: transparent transparent transparent $portfoliolight;
   }
   &:after {
+    border-width: 0 0 9vw 50vw;
     border-color: transparent transparent $portabouthead transparent;
+
+    @include bp(47.8rem) {
+      border-color: transparent transparent $portfoliolight transparent;
+    }
   }
 }
 
-//Blog triangles
-.header--blog .header{
-  &:before {
-    border-color: transparent transparent transparent $blogback;
+  //Blog triangles
+  .header--blog .header {
+    &:before {
+      border-color: transparent transparent transparent $blogback;
+    }
+    &:after {
+      border-color: transparent transparent $blogback transparent;
+    }
   }
-  &:after {
-    border-color: transparent transparent $blogback transparent;
+
+  //Musthead menu
+  .header__musthead {
+    padding-top: 25px;
+
+    &--flex {
+      display: flex;
+      align-items: flex-start;
+    }
   }
-}
 
-
-//Musthead menu
-.header__musthead {
-  padding-top: 25px;
-
-  &--flex {
-    display: flex;
-    align-items: flex-start;
+  .svg__hamburger {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    fill: $white;
   }
-}
 
-.svg__hamburger {
-  width: 40px;
-  height:40px;
-  margin-right: 20px;
-  fill: $white;
-}
+  //Header Body
 
-//Header Body
+  .header__body {
+    position: relative;
+    margin-bottom: auto;
+  }
 
-.header__body {
-  position: relative;
-  margin-bottom: auto;
-}
+  .svg__portfolio_header {
+    position: absolute;
+    width: 100%;
+    height: 320px;
 
-.svg__portfolio_header {
-  position: absolute;
-  width: 100%;
-  height: 320px;
-
-  fill: $portfolioheader;
-}
+    fill: $portfolioheader;
+  }
