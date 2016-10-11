@@ -1,20 +1,24 @@
 #Учебная сборка Loftschool (выпускной проект Радченко Ивана №1)
 
-1. Portoflio page ready. Had problems with Triangles - tryed to inline svg first but failed so did them with pure css
-2. Blog page ready - There are few cyrillic texts. Do not pay attention to that. Everything will be in english. I did not install the cyrillic fonts
-3. Login and Welcome forms as well as page are ready. Both of the forms are displayed - later on of them will be hidden and changed on Button clicks.
-4. Half ready About me page - Having problems with Map inlining as a live background. Footer module refuses to nest in the body part.
-- Need to finish the main page body part.
-5. Most of the elements incapsulated into modules
+1. 4 pages of a portfolio ready
+2. Adaptiveness- several areas of improvement -
+- Portfolio page(need to fix the maximum resize, it stucks to early)
+- The slider is broken - need to fix the pug with JS in parallel
+3. Fonts change their sizes on each bp
+4. Triangles does not change the angles - need to fix that later
+5. Need to make pretty headlines with circles
 
-
-Issues:
-1. Possible false triangle positioning
-2. Had few minor issues with merging requests with different changes on both ends (2 pcs)
-3. Currentely there is a mix of REMs and PXs. Will use plugin to fix it later.
-4. Mix of Flexbox and Static grid. Will need to turn the grid into Flexbox grid on this week for Responsiveness.
-
-
+/* JS */
+ - Preloader -half ready, js does not work
+ - Menu - none
+ - Scrolls - none. Need to create Link elements around svgs and add the smooth scroll affect
+ - Nav manu on the blog post with Fixed movement of the block
+ - Form Ajax
+ - Slider - the harders part
+ 
+ 
+/* ANIMATION */
+1. Not started yet
 
 
 
