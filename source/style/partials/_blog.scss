@@ -6,10 +6,19 @@
 }
 
 .blog__wrapper {
+  //position: relative;
   max-width: 1800px;
   margin: 0 auto;
 }
 
+
+//Blog article navigation menu
+
+.blog__nav {
+  //position: fixed;
+  top: 2%;
+  right: 2%;
+}
 
 .blog__list {
   padding: 0;
