@@ -9,7 +9,7 @@ $(function () {
     var
         $this = $(this),
         background = $this.css('background-image'),
-        img = $this.is('img');
+        imgs = $this.is('img');
 
     if (background != 'none') {
       var path = background.replace('url("', '').replace('")', '');
@@ -26,7 +26,33 @@ $(function () {
     }
   });
 
-  console.log(imgs);
+  var percentsTotal = 1;
+  for (var i = 0; i < imgs.length; i++) {
+    var image = $('<img>', {
+      attr: {
+        src: imgs[i]
+      }
 
-});
+    });
+
+
+    image.on('load', function () {
+      setPercents(imgs.length, percentsTotal);
+      percentsTotal++;
+    });
+
+  }
+
+  function setPercents(total, current) {
+    var percent = Math.ceil(current/total * 100);
+
+    if (percent >= 100) {
+      $('.preloader').fadeOut();
+    }
+
+
+    $('.preloader__percents').text(percent + "%");
+  }
+
+})();
 

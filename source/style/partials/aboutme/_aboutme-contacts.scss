@@ -8,6 +8,10 @@
   margin: auto;
   background: rgba($portabouthead,.85);
   z-index: 2;
+
+  @include bp(xs) {
+    width: 320px;
+  }
 }
 
 .contacts__list {
