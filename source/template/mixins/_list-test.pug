@@ -1,0 +1,7 @@
+- navigation = [{item: "Home",link: "index.html"},{item: "Portfolio",link: "portfolio.html"},{item: "Blog",link: "blog.html"},{item: "Authorization",link: "login.html"}]
+mixin nav(navItems, cls)
+  nav(class=cls + " " + cls +"--closed")
+      ul(class=cls + "__list")
+          each navItem in navItems
+            li(class=cls + "__item")
+               a(href=navItem.link class=cls + "__link")= navItem.item
