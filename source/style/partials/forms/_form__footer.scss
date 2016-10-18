@@ -1,4 +1,6 @@
-//Footer module for the Form--Login
+/* ====================================
+Footer module for the Form--Login
+==================================== */
 
 .form {
   &__footer {
@@ -8,7 +10,9 @@
     align-items: center;
     height: 45px;
 
-    //Common form button styles
+/* ====================================
+Form Button Styles
+==================================== */
     &-btn {
       flex: 1;
       display: block;
@@ -33,7 +37,9 @@
         }
       }
 
-      //Submit buttons for the forms
+/* ====================================
+Submit buttons for the forms
+==================================== */
       &--submit {
         border: none;
         cursor: pointer;
@@ -43,7 +49,9 @@
         }
       }
 
-      //Button order styles - max 3 in a row
+/* ====================================
+Button order styles - max 3 in a row
+==================================== */
       &--middle {
         flex: 3 auto;
       }

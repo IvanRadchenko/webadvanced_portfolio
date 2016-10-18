@@ -1,4 +1,6 @@
-//Common header
+/* ====================================
+The main header for most pages
+==================================== */
 
 .header {
   background: url("../img/water_map/water.jpg") center center no-repeat;
@@ -57,7 +59,9 @@
   }
 }
 
-//Aboutme triangles
+/* ====================================
+About me Page triangles
+==================================== */
 .header--difcolors .header {
   &:before {
     border-width: 9vw 2vw 0 50vw;
@@ -73,7 +77,9 @@
   }
 }
 
-  //Blog triangles
+/* ====================================
+Blog triangles with different colors
+==================================== */
   .header--blog .header {
     &:before {
       border-color: transparent transparent transparent $blogback;
@@ -83,7 +89,9 @@
     }
   }
 
-  //Musthead menu
+/* ====================================
+Musthead wrapper for the menu and buttons inside
+==================================== */
   .header__musthead {
     padding-top: 25px;
   }
@@ -95,7 +103,9 @@
     fill: $white;
   }
 
-  //Header Body
+/* ====================================
+The body of the Header
+==================================== */
 
   .header__body {
     position: relative;

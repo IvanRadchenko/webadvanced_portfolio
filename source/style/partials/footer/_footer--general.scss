@@ -1,4 +1,7 @@
-//General Footer styles
+/* ====================================
+General Footer styles
+==================================== */
+
 .footer__wrapper {
   background-color: $footertop;
   z-index: 999;
@@ -30,6 +33,9 @@
   }
 }
 
+/* ====================================
+Social middle block styles in order to position the Social module the right way
+==================================== */
 .footer__middle {
   position: relative;
 
@@ -143,6 +149,10 @@
     font-family: "robotomedium_italic", Arial, san-serif;
 }
 
+
+/* ====================================
+Copyright
+==================================== */
 .footer__copyright--general {
   background-color: $copyright;
   width: 100%;
