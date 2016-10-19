@@ -4,4 +4,5 @@ mixin nav(navItems, cls)
       ul(class=cls + "__list")
           each navItem in navItems
             li(class=cls + "__item")
-               a(href=navItem.link class=cls + "__link")= navItem.item
+              - linkcls = cls + "__link"
+               a(href=navItem.link class=linkcls)= navItem.item
