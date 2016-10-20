@@ -4,34 +4,46 @@ Navigation
 
 .overlay {
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 9999;
+  background: rgba($btn,.87);
 
-  &:after {
-    content: "";
-    display: block;
-    z-index: 9999;
-    heigth: 100%;
-    width: 50%;
-    background: rgba($btn,.87);
-    transform: translateX(-50%);
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    z-index: 9999;
-    heigth: 100%;
-    width: 50%;
-    background: rgba($btn,.87);
-    transform: translateX(50%);
-  }
+  //&:after {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  height: 100%;
+  //  width: 49vw;
+  //  //background: rgba($btn,.87);
+  //  //transform: translateX(0);
+  //}
+  //
+  //&:before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  height: 100%;
+  //  width: 49vw;
+  //  //background: rgba($btn,.87);
+  //  //transform: translateX(0);
+  //}
 }
+
+.overlay--isactive {
+  display: flex;
+}
+
+
 
 .overlay-slide-down {
   transition: all .4s ease-in-out;

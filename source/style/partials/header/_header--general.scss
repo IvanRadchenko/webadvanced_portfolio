@@ -101,6 +101,13 @@ Musthead wrapper for the menu and buttons inside
     height: 40px;
     margin-right: 20px;
     fill: $white;
+    z-index: 10000;
+  }
+
+  .svg__hamburger--active {
+    position: absolute;
+    top: 20%;
+    right: 20%;
   }
 
 /* ====================================

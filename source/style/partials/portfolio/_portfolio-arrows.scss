@@ -1,6 +1,6 @@
 //Arrows general
 .svg__portf_arrow_down,.svg__portf_arrow_up {
-  z-index: 999;
+  z-index: 20;
   cursor: pointer;
 
   &:hover {
@@ -21,7 +21,7 @@
 }
 
 .arrow__down  {
-  z-index: 999;
+  z-index: 20;
   margin-bottom: auto;
 
   & svg {
