@@ -1,10 +1,16 @@
+"use strict";
+
 var menuModule = (function () {
-	function mainMenu() {
-		document.querySelector('.svg__hamburger').addEventListener('click', function(e) {
+  function mainMenu() {
+    var elem = document.querySelector(".overlay"),
+        hamburger = document.querySelector('.hamburger');
+
+
+    hamburger.addEventListener('click', function(e) {
+
 			e.preventDefault();
-      
-      var elem = document.querySelector(".overlay");
-      
+
+      hamburger.classList.toggle('hamburger--cross');
 			elem.classList.toggle('overlay--isactive');
 	});
 	}

@@ -96,19 +96,74 @@ Musthead wrapper for the menu and buttons inside
     padding-top: 25px;
   }
 
-  .svg__hamburger {
+  .hamburger {
+    display: block;
+    position: relative;
     width: 40px;
     height: 40px;
     margin-right: 20px;
-    fill: $white;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
     z-index: 10000;
   }
 
-  .svg__hamburger--active {
-    position: absolute;
-    top: 20%;
-    right: 20%;
+
+
+//Hamburger triline
+.hamburger__lines {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: white;
+  transition: background 0.1s 0s;
+}
+
+.hamburger__lines:before,
+.hamburger__lines:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  content: "";
+}
+
+.hamburger__lines:before {
+  top: -14px;
+  transition: top 0.3s 0.3s, transform 0.3s 0s;
+}
+
+.hamburger__lines:after {
+  bottom: -14px;
+  transition: bottom 0.3s 0.3s, transform 0.3s 0s;
+}
+
+//Hamburger cross animation
+.hamburger--cross {
+  & .hamburger__lines {
+    background: none;
+    transition: background 0.1s 0.2s;
   }
+
+  & .hamburger__lines:before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.25s 0s, transform 0.3s 0.25s;
+  }
+
+  & .hamburger__lines:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 0.25s 0s, transform 0.3s 0.25s;
+  }
+}
+
 
 /* ====================================
 The body of the Header
