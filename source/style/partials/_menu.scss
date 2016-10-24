@@ -3,56 +3,47 @@ Navigation
 ==================================== */
 
 .overlay {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: rgba($btn,.87);
 
-  //&:after {
-  //  content: "";
-  //  display: block;
-  //  position: absolute;
-  //  top: 0;
-  //  right: 0;
-  //  height: 100%;
-  //  width: 49vw;
-  //  //background: rgba($btn,.87);
-  //  //transform: translateX(0);
-  //}
-  //
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    height: 100%;
+    width: 50%;
+    background: rgba($btn,.87);
+    //transform: translateX(0);
+  }
+
   //&:before {
   //  content: "";
   //  display: block;
   //  position: absolute;
   //  top: 0;
-  //  left: 0;
+  //  left: -50%;
   //  height: 100%;
-  //  width: 49vw;
-  //  //background: rgba($btn,.87);
+  //  width: 50%;
+  //  background: rgba($btn,.87);
+  //  transition: left 0.6s ease-in;
   //  //transform: translateX(0);
   //}
 }
 
 .overlay--isactive {
+  position: fixed;
   display: flex;
-}
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 
+  &:after {
+    right: 0;
+  }
 
-
-.overlay-slide-down {
-  transition: all .4s ease-in-out;
-  transform: translateY(0)
-}
-
-.overlay-slide-up {
-  transition: all .8s ease-in-out;
-  transform: translateY(-100%)
+  //&:before {
+  //  left: 0;
+  //}
 }
 
 .menu__list {
@@ -67,7 +58,7 @@ Navigation
   list-style: none;
   height: 100%;
   margin-bottom: 7rem;
-  transform: translateY(-100%);
+  //transform: translateY(-100%);
 }
 
 .menu__link {

@@ -17,7 +17,7 @@ var menuModule = (function () {
 
 
 	function blogMenu() {
-		console.log("ok");
+		console.log(overlayRight);
 	}
 
 	 return {
