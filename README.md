@@ -1,24 +1,41 @@
-#Учебная сборка Loftschool (выпускной проект Радченко Ивана №1)
+#This is my personal project in WebAdvanced courses from Loftschool.
 
-1. 4 pages of a portfolio ready
-2. Adaptiveness- several areas of improvement -
-- Portfolio page(need to fix the maximum resize, it stucks to early)
-- The slider is broken - need to fix the pug with JS in parallel
-3. Fonts change their sizes on each bp
-4. Triangles does not change the angles - need to fix that later
-5. Need to make pretty headlines with circles
+The goal of this project is to get acquainted with different stack of technologies, trends, learn to apply them on practice.
+This is purely educational project with lots of possible issues and shity code at the very start. The further I go the more I try to polish the code style as well as the whole project itself.
 
-/* JS */
- - Preloader -half ready, js does not work
- - Menu - none
- - Scrolls - none. Need to create Link elements around svgs and add the smooth scroll affect
- - Nav manu on the blog post with Fixed movement of the block
- - Form Ajax
- - Slider - the harders part
+#What is already done:
+* 4 pages of a portfolio ready - Pug for HTML and Sass for CSS
+* Adaptiveness
+ * Portfolio page(need to fix the maximum resize, it stucks too early)
+ * The slider is broken - need to fix the pug with JS in parallel
+* Triangles does not change the angles - need to fix that later with SVG
+* Need to make pretty headlines with circles - Leave for the very end
+
+#What else to be done
+##JS
+* Preloader -half ready, js does not work properly
+ * Fix background image count
+* Menu - Done. 
+ * Fix the menu navigation font size.
+* Smooth scrolling - none
+* Menu Navigtation off-canvas as well as link-blog post bond in js for dynamic change of the focus
+* Forms - validation, AJAX information submit
+* Slider - none
  
  
-/* ANIMATION */
-1. Not started yet
+##ANIMATION
+* Parallax for background forest using WebGL
+* Flip card animation for the Login forms
+* Blur on contact forms
+
+
+##Node.js  and MongoDB
+* Static page rendering
+* Error handler
+* Creating the data base structure for the admin part
+* Follow the "Module Pattern"
+
+
 
 
 
