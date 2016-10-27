@@ -1,0 +1,9 @@
+@mixin addClass {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transition: opacity .6s cubic-bezier(0.6, -0.18, 0.435, 0.045);
+      animation: wiggle .4s #{$i * .14s};
+      transition-delay: $i * 0.1s;
+    }
+  }
+}
