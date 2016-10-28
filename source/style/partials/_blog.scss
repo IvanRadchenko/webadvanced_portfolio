@@ -2,7 +2,7 @@
 Blog main body part
 ==================================== */
 
-.blog__body {
+.blog {
   padding-top: 35px;
   background-color: $blogback;
 }
@@ -18,26 +18,28 @@ Blog main body part
 Blog slider navigation
 ==================================== */
 
-.blog__nav {
+.blog-navigation {
   //position: fixed;
-  top: 2%;
-  right: 2%;
 }
 
-.blog__list {
+.blog-navigation__list {
+  display: flex;
+  flex-flow: column wrap;
   padding: 0;
   margin: 0;
   text-align: right;
   list-style: none;
 }
 
-.blog__item {
-  display: inline-block;
-  padding-top: 10px;
-  height: 40px;
+.blog-navigation__item {
+  margin-bottom: 1rem;
+
+  &:first-child {
+    padding-top: 1rem;
+  }
 }
 
-.blog__link {
+.blog-navigation__link {
   display: block;
   padding-right: 15px;
   color: $darkgrey;
@@ -54,22 +56,22 @@ Blog slider navigation
   }
 }
 
-.blogpost_section {
-  margin-left: 80px;
-}
-
-
 /* ====================================
 Article styles
 ==================================== */
+
 .blogpost {
+  margin-left: 80px;
+ 
+ &__wrapper {
   margin-bottom: 65px;
 
-  &:not(:last-of-type):after {
-    content: "";
-    display: block;
-    padding-top: 65px;
-    border-bottom: 5px solid $bgborder;
+    &:not(:last-of-type):after {
+      content: "";
+      display: block;
+      padding-top: 65px;
+      border-bottom: 5px solid $bgborder;
+    }
   }
 
   &__title {

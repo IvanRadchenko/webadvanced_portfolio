@@ -5,22 +5,22 @@ include ../mixins/_inputs
 block content
     .header--blog
       include ../common/header/_header--blog
-    main.blog__body
+    main.blog
       .blog__wrapper
         .grid
-          .col_lg-2.blog__nav
-            ul.blog__list
-              li.blog__item
-                a.blog__link.blog__link--active Most important in SASS
-              li.blog__item
-                a.blog__link Приемы в верстке, без которых не обходится ни один сайт
-              li.blog__item
-                a.blog__link The best Gulp build ever
-              li.blog__item
-                a.blog__link Why have I chosen Pug
+          .col_lg-2.blog-navigation
+            ul.blog-navigation__list
+              li.blog-navigation__item
+                a.blog-navigation__link.blog-navigation__link--active Most important in SASS
+              li.blog-navigation__item
+                a.blog-navigation__link Приемы в верстке, без которых не обходится ни один сайт
+              li.blog-navigation__item
+                a.blog-navigation__link The best Gulp build ever
+              li.blog-navigation__item
+                a.blog-navigation__link Why have I chosen Pug
           .col_lg-10
-            section.blogpost_section
-              article.blogpost
+            section.blogpost
+              article.blogpost__wrapper
                 h2.blogpost__title Most important in SASS
                 p.blogpost__date 22 ноября 2016
                 p.
@@ -39,7 +39,7 @@ block content
                   и сфера нашей активности способствует подготовки и реализации модели развития. С другой
                   стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации
                   системы обучения кадров, соответствует насущным потребностям.
-              article.blogpost
+              article.blogpost__wrapper
                 h2.blogpost__title Приемы в верстке, без которых не обходится ни один сайт
                 p.blogpost__date 22 ноября 2016
                 p.
