@@ -20,6 +20,10 @@ Blog slider navigation
 
 .blog-navigation {
   //position: fixed;
+  @include bp(32rem) {
+    position: absolute;
+    left: -200px;
+  }
 }
 
 .blog-navigation__list {
@@ -29,6 +33,17 @@ Blog slider navigation
   margin: 0;
   text-align: right;
   list-style: none;
+
+  &--fixed {
+    position: fixed;
+    top: 2%;
+    left: 3.8%;
+    width: 15%;
+
+    @include bp(md) {
+      position: none;
+    }
+  }
 }
 
 .blog-navigation__item {
@@ -43,6 +58,8 @@ Blog slider navigation
   display: block;
   padding-right: 15px;
   color: $darkgrey;
+  border-right: 3px solid transparent;
+  transition: all .6s linear;
 
   &:hover {
     color: $btn;

@@ -22,9 +22,11 @@ var menuModule = {
 		return this;
 	},
 
-
+		//Paul Lewis Scroll optimization example https://www.html5rocks.com/en/tutorials/speed/animations/
     blogMenu: function() {
         var mover       = document.querySelector('.blog-navigation__list'),
+        		articles    = document.querySelectorAll('.blogpost__title'),
+        		navlinks     = document.querySelectorAll('.blog-navigation__link'),
             lastScrollY  = 0,
             ticking      = false;
         
@@ -48,18 +50,40 @@ var menuModule = {
  * Our animation callback
  */
         function update() {
-            var moverTop            = 0,
-                halfWindowHeight    = window.innerHeight * 0.5,
+            var articleFirstTop = articles[0].offsetTop,
+            		article = null,
+            		articlesTop = [],
+                // halfWindowHeight    = window.innerHeight * 0.7,
                 offset              = 0;
+                
+                // first loop is going to do all
+								// the reflows (since we use offsetTop)
+							    for(var m = 0; m < articles.length; m++) {
 
-                moverTop = mover.offsetTop;
+							        article       = articles[m];
+							        articlesTop[m] = article.offsetTop;
+							    }
+
+							    //second loop goes through the articles and
+							    //adds class active to the navigation links
+							    for(var m = 0; m < articles.length; m++) {
+
+							        var navlink       = navlinks[m];
+
+							        if(lastScrollY+150 >= articlesTop[m] && lastScrollY < articlesTop[m+1]-150) {
+							            navlink.classList.add('blog-navigation__link--active');
+							        } else {
+							            navlink.classList.remove('blog-navigation__link--active');
+							        }
+
+							    }
 
                 // adding left class
                 // to the elements' classlist
-                if(lastScrollY > moverTop - halfWindowHeight) {
-                    mover.classList.add('left');
+                if(lastScrollY > articleFirstTop) {
+                    mover.classList.add('blog-navigation__list--fixed');
                 } else {
-                    mover.classList.remove('left');
+                    mover.classList.remove('blog-navigation__list--fixed');
                 }
 
             // allow further rAFs to be called
