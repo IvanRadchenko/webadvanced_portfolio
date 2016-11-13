@@ -8,7 +8,7 @@ Blog main body part
 }
 
 .blog__wrapper {
-  //position: relative;
+  position: relative;
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -19,35 +19,90 @@ Blog slider navigation
 ==================================== */
 
 .blog-navigation {
-  //position: fixed;
-  @include bp(32rem) {
-    position: absolute;
-    left: -200px;
-  }
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  margin-right: 40px;
+  color: #fff;
+
+  // @include bp(sm) {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -50%;
+  //   height: 100%;
+  //   width: 50%;
+  //   background: $btn;
+  //   transition: 0s ease;
+
+
+  //   &--active {
+  //   left: 0;
+  //   transition: 1s ease;
+  // }
+  // }
 }
 
 .blog-navigation__list {
-  display: flex;
-  flex-flow: column wrap;
+  position: fixed;
+  width: 25%;
   padding: 0;
   margin: 0;
   text-align: right;
   list-style: none;
 
-  &--fixed {
-    position: fixed;
-    top: 2%;
-    left: 3.8%;
-    width: 15%;
+  // @include bp(sm) {
+  //   position: fixed;
+  //   left: -25%;
+  //   transform: translate3d(5%, 0, 0)scale(.97);
+  // }
 
-    @include bp(md) {
-      position: none;
-    }
+  &--fixed {
+  
   }
+
+  // &--active {
+  //   left: 0;
+  //   animation: slideIn .35s ease-in-out;
+  // }
+
 }
+
+@-webkit-keyframes slideIn {
+        0% {
+            opacity: .3;
+            -webkit-transform: translate3d(5%, 0, 0)scale(.97);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0)scale(1);
+        }
+    }
+    @-moz-keyframes slideIn {
+        0% {
+            opacity: .3;
+            -moz-transform: translate3d(5%, 0, 0)scale(.97);
+        }
+        100% {
+            opacity: 1;
+            -moz-transform: translate3d(0, 0, 0)scale(1);
+        }
+    }
+    @keyframes slideIn {
+        0% {
+            opacity: .3;
+            transform: translate3d(5%, 0, 0)scale(.97);
+        }
+        100% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0)scale(1);
+        }
+    }
+
+    //Nav Items
 
 .blog-navigation__item {
   margin-bottom: 1rem;
+  width: 100%;
 
   &:first-child {
     padding-top: 1rem;
@@ -59,18 +114,31 @@ Blog slider navigation
   padding-right: 15px;
   color: $darkgrey;
   border-right: 3px solid transparent;
-  transition: all .6s linear;
 
   &:hover {
     color: $btn;
     cursor: pointer;
+
+    @include bp(sm) {
+      color: white;
+      text-decoration: underline;
+  }
   }
 
   &--active {
     border-right: 3px solid $btn;
     color: $btn;
     font-family: "robotobold", Arial, san-serif;
+
+    @include bp(sm) {
+      border-color: white;
+    }
   }
+
+  @include bp(sm) {
+    color: white;
+  }
+
 }
 
 /* ====================================
@@ -78,7 +146,7 @@ Article styles
 ==================================== */
 
 .blogpost {
-  margin-left: 80px;
+  margin-left: 40px;
  
  &__wrapper {
   margin-bottom: 65px;
@@ -100,4 +168,41 @@ Article styles
     color: $btn;
     margin-bottom: 25px;
   }
+}
+
+
+//Button Expand
+.expand {
+  visibility: hidden;
+  position: absolute;
+  right: -30px;
+  top: 40%;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  line-height: 50px;
+  background: $btn;
+  border: none;
+  z-index: -1;
+  cursor: pointer;
+  outline: none;
+
+  &:after {
+    position: relative;
+    left: 1rem;
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 1.5rem;
+    height: 1.5rem;
+    border-right: 0.2em solid white;
+    border-top: 0.2em solid white;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+}
+
+@include bp(sm) {
+  visibility: visible;
+}
+
 }
